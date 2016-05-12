@@ -1,10 +1,10 @@
 <wm-partial data-ng-controller="leftnavPageController" name="leftnav" type="left-panel">
     <wm-nav name="leftnavigation" type="pills" layout="stacked">
         <wm-nav-item name="list_latestUpdate">
-            <wm-anchor caption="Administration" name="adminButton" iconclass="fa fa-gears" class="active"></wm-anchor>
+            <wm-anchor caption="Administration" name="adminButton" iconclass="fa fa-gears" class="active" on-click="goToPage-Laboratory"></wm-anchor>
         </wm-nav-item>
         <wm-nav-item name="list_inTheNews">
-            <wm-anchor caption="Data Entry" name="dataEntryButton" iconclass="glyphicon glyphicon-pencil"></wm-anchor>
+            <wm-anchor caption="Data Entry" name="dataEntryButton" iconclass="fa fa-pencil"></wm-anchor>
         </wm-nav-item>
         <wm-nav-item name="list_share">
             <wm-anchor caption="Dashboard" name="dashboardButton" iconclass="fa fa-dashboard"></wm-anchor>

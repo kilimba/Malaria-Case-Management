@@ -1,0 +1,130 @@
+<style id="Laboratory.css">
+
+</style>
+<script id="Laboratory.js">
+Application.$controller("LaboratoryPageController", ["$scope", function ($scope) {
+    "use strict";
+
+    /* perform any action with the variables inside this block(on-page-load) */
+    $scope.onPageVariablesReady = function () {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. $scope.Variables.staticVariable1.getData()
+         */
+    };
+    
+    /* perform any action with widgets inside this block */
+    $scope.onPageReady = function () {
+        /*
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. $scope.Widgets.byId(), $scope.Widgets.byName()or access widgets by $scope.Widgets.widgetName
+         */
+    };
+
+}]);
+
+
+Application.$controller("PatientResultsGrid1Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("PatientResultsLiveform1Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+</script>
+<script id="Laboratory.variables.json">
+var _LaboratoryPage_Variables_ ={}
+</script>
+<script id="Laboratory.html" type="text/ng-template">
+<wm-page data-ng-controller="LaboratoryPageController" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-livegrid name="PatientResultsLivegrid1" service="tracking@PatientResults" formlayout="dialog">
+                <wm-grid deleterow="true" updaterow="true" insertrow="true" gridfirstrowselect="true" readonlygrid="false" name="PatientResultsGrid1" dataset="bind:Variables.TrackingPatientResultsData.dataSet">
+                    <wm-grid-column binding="resultsId" caption="Results Id" type="integer" primary-key="true" generator="identity" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                    <wm-grid-column binding="testDate" caption="Test Date" type="date" readonly="false" datepattern="yyyy-MM-dd" formatpattern="toDate" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                    <wm-grid-column binding="mrdtControl" caption="Mrdt Control" type="string" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                    <wm-grid-column binding="mrdtPalcifarum" caption="Mrdt Palcifarum" type="string" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                    <wm-grid-column binding="mrdtPan" caption="Mrdt Pan" type="string" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                    <wm-grid-column binding="mrdtIntepretation" caption="Mrdt Intepretation" type="string" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                    <wm-grid-column binding="bsResult" caption="Bs Result" type="string" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                    <wm-grid-column binding="bsOtherTests" caption="Bs Other Tests" type="string" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                    <wm-grid-column binding="patient.patientId" caption="Patient Patient Id" type="integer" primary-key="true" generator="identity" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                    <wm-grid-column binding="patient.identifier" caption="Patient Identifier" type="integer" readonly="false" disable-inline-editing="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                    <wm-grid-action key="addNewRow" label="New" value="new" icon="new" show="true" class="btn-primary" action="addNewRow()"></wm-grid-action>
+                </wm-grid>
+                <wm-liveform novalidate="false" title="Details" name="PatientResultsLiveform1" dataset="bind:Variables.TrackingPatientResultsData.dataSet" formtype="dialog">
+                    <wm-layoutgrid name="layoutgrid1">
+                        <wm-gridrow name="gridrow10">
+                            <wm-gridcolumn name="gridcolumn1" columnwidth="12">
+                                <wm-form-field display-name="Results Id" show="false" primary-key="true" generator="identity" key="resultsId" type="integer" maxvalue="NaN" is-related="false" readonly="true" required="true" placeholder="Enter value" minvalue="NaN"
+                                multiple="false" regexp=".*"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow11">
+                            <wm-gridcolumn name="gridcolumn2" columnwidth="12">
+                                <wm-form-field display-name="Patient" show="true" primary-key="false" generator="assigned" key="patient" type="list" is-related="true" readonly="false" required="true" related-field-name="identifier" placeholder="Select value"
+                                datafield="All Fields" displayfield="patientId" displayvalue="firstName + ' ' + lastName" multiple="false" regexp=".*"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow12">
+                            <wm-gridcolumn name="gridcolumn3" columnwidth="12">
+                                <wm-form-field display-name="Test Date" show="true" primary-key="false" generator="null" key="testDate" type="date" is-related="false" readonly="false" required="true" placeholder="Select date" outputformat="yyyy-MM-dd" multiple="false"
+                                regexp=".*"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow13">
+                            <wm-gridcolumn name="gridcolumn4" columnwidth="12">
+                                <wm-form-field display-name="Mrdt Control" show="true" primary-key="false" generator="null" key="mrdtControl" type="string" maxvalue="255" is-related="false" readonly="false" required="true" widget-type="Radioset" placeholder="Enter value"
+                                dataset="True,False" multiple="false" regexp=".*"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow14">
+                            <wm-gridcolumn name="gridcolumn5" columnwidth="12">
+                                <wm-form-field display-name="Mrdt Palcifarum" show="true" primary-key="false" generator="null" key="mrdtPalcifarum" type="string" maxvalue="255" is-related="false" readonly="false" required="true" widget-type="Radioset" placeholder="Enter value"
+                                dataset="True,False" multiple="false" regexp=".*"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow15">
+                            <wm-gridcolumn name="gridcolumn6" columnwidth="12">
+                                <wm-form-field display-name="Mrdt Pan" show="true" primary-key="false" generator="null" key="mrdtPan" type="string" maxvalue="255" is-related="false" readonly="false" required="true" widget-type="Radioset" placeholder="Enter value"
+                                dataset="True,False" multiple="false" regexp=".*"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow16">
+                            <wm-gridcolumn name="gridcolumn7" columnwidth="12">
+                                <wm-form-field display-name="Mrdt Intepretation" show="true" primary-key="false" generator="null" key="mrdtIntepretation" type="string" maxvalue="255" is-related="false" readonly="false" required="true" widget-type="Radioset"
+                                placeholder="Enter value" dataset="Positive,Negative,Invalid" multiple="false" regexp=".*"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow17">
+                            <wm-gridcolumn name="gridcolumn8" columnwidth="12">
+                                <wm-form-field display-name="Bs Result" show="true" primary-key="false" generator="null" key="bsResult" type="string" maxvalue="255" is-related="false" readonly="false" required="false" placeholder="Enter value" multiple="false"
+                                regexp=".*"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow18">
+                            <wm-gridcolumn name="gridcolumn9" columnwidth="12">
+                                <wm-form-field display-name="Bs Other Tests" show="true" primary-key="false" generator="null" key="bsOtherTests" type="string" maxvalue="255" is-related="false" readonly="false" required="false" placeholder="Enter value" multiple="false"
+                                regexp=".*"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                    <wm-form-action key="cancel" display-name="Cancel" show="true" class="form-cancel btn-secondary" iconclass="glyphicon glyphicon-remove-circle" action="cancel()" type="button" update-mode="true"></wm-form-action>
+                    <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="glyphicon glyphicon-save" type="Submit" update-mode="true"></wm-form-action>
+                </wm-liveform>
+            </wm-livegrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>
+</script>

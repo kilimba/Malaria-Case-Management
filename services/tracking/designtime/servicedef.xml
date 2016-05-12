@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="tracking" CRUDService="true" type="DataService" springFile="tracking.spring.xml">
+    <dataobjects>
+        <dataobject javaType="com.mcm2.tracking.Hamlet">
+            <element name="hamletId" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="village" typeRef="com.mcm2.tracking.Village" isList="false" allowNull="true"/>
+            <element name="hamletName" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="patients" typeRef="com.mcm2.tracking.Patient" isList="true" allowNull="true"/>
+            <element name="healthFacilities" typeRef="com.mcm2.tracking.HealthFacility" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.mcm2.tracking.Healthworker">
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="healthFacility" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="firstName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="middleName" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="surname" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="department" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="com.mcm2.tracking.Department">
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="healthFacility" typeRef="com.mcm2.tracking.HealthFacility" isList="false" allowNull="false"/>
+            <element name="department" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="com.mcm2.tracking.PatientResults">
+            <element name="resultsId" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="patient" typeRef="com.mcm2.tracking.Patient" isList="false" allowNull="true"/>
+            <element name="testDate" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="mrdtControl" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="mrdtPalcifarum" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="mrdtPan" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="mrdtIntepretation" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="bsResult" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="bsOtherTests" typeRef="java.lang.String" isList="false" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.mcm2.tracking.Village">
+            <element name="villageId" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="ward" typeRef="com.mcm2.tracking.Ward" isList="false" allowNull="true"/>
+            <element name="villageName" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="hamlets" typeRef="com.mcm2.tracking.Hamlet" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.mcm2.tracking.District">
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="district" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="wards" typeRef="com.mcm2.tracking.Ward" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.mcm2.tracking.Patient">
+            <element name="patientId" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="hamlet" typeRef="com.mcm2.tracking.Hamlet" isList="false" allowNull="true"/>
+            <element name="identifier" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="firstName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="middleName" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="lastName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="dateOfBirth" typeRef="java.util.Date" isList="false" allowNull="true"/>
+            <element name="sex" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="street" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="patientResultses" typeRef="com.mcm2.tracking.PatientResults" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.mcm2.tracking.HealthFacility">
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="hamlet" typeRef="com.mcm2.tracking.Hamlet" isList="false" allowNull="true"/>
+            <element name="facilityId" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="facilityName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="facilityType" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="departments" typeRef="com.mcm2.tracking.Department" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.mcm2.tracking.Ward">
+            <element name="wardId" typeRef="java.lang.Short" isList="false" allowNull="false"/>
+            <element name="district" typeRef="com.mcm2.tracking.District" isList="false" allowNull="true"/>
+            <element name="wardName" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="villages" typeRef="com.mcm2.tracking.Village" isList="true" allowNull="true"/>
+        </dataobject>
+    </dataobjects>
+</service>

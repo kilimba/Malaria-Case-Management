@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.mcm2.tracking">
+    <class entity-name="com.mcm2.tracking.Hamlet" table="hamlet" name="com.mcm2.tracking.Hamlet" schema="public">
+        <id name="hamletId" type="integer">
+            <column name="hamlet_id" length="255" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="hamletName" type="string">
+            <column name="hamlet_name" length="255" not-null="false" precision="19"/>
+        </property>
+        <many-to-one name="village" class="com.mcm2.tracking.Village" fetch="select">
+            <column name="village" length="255" not-null="false" precision="19"/>
+        </many-to-one>
+        <set name="patients" table="hamlet" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="hamlet"/>
+            </key>
+            <one-to-many class="com.mcm2.tracking.Patient"/>
+        </set>
+        <set name="healthFacilities" table="hamlet" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="hamlet"/>
+            </key>
+            <one-to-many class="com.mcm2.tracking.HealthFacility"/>
+        </set>
+    </class>
+    <class entity-name="com.mcm2.tracking.Healthworker" table="healthworker" name="com.mcm2.tracking.Healthworker" schema="public">
+        <id name="id" type="integer">
+            <column name="id" length="255" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="healthFacility" type="integer">
+            <column name="health_facility" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="firstName" type="string">
+            <column name="first_name" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="middleName" type="string">
+            <column name="middle_name" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="surname" type="string">
+            <column name="surname" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="department" type="integer">
+            <column name="department" length="255" not-null="true" precision="19"/>
+        </property>
+    </class>
+    <class entity-name="com.mcm2.tracking.Department" table="department" name="com.mcm2.tracking.Department" schema="public">
+        <id name="id" type="integer">
+            <column name="id" length="255" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="department" type="string">
+            <column name="department" length="255" not-null="true" precision="19"/>
+        </property>
+        <many-to-one name="healthFacility" class="com.mcm2.tracking.HealthFacility" fetch="select">
+            <column name="health_facility" length="255" not-null="true" precision="19"/>
+        </many-to-one>
+    </class>
+    <class entity-name="com.mcm2.tracking.PatientResults" table="patient_results" name="com.mcm2.tracking.PatientResults" schema="public">
+        <id name="resultsId" type="integer">
+            <column name="results_id" length="255" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="testDate" type="date">
+            <column name="test_date" length="13" not-null="false" precision="19"/>
+        </property>
+        <property name="mrdtControl" type="string">
+            <column name="mrdt_control" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="mrdtPalcifarum" type="string">
+            <column name="mrdt_palcifarum" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="mrdtPan" type="string">
+            <column name="mrdt_pan" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="mrdtIntepretation" type="string">
+            <column name="mrdt_intepretation" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="bsResult" type="string">
+            <column name="bs_result" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="bsOtherTests" type="string">
+            <column name="bs_other_tests" length="255" not-null="false" precision="19"/>
+        </property>
+        <many-to-one name="patient" class="com.mcm2.tracking.Patient" fetch="select">
+            <column name="patient" length="255" not-null="false" precision="19"/>
+        </many-to-one>
+    </class>
+    <class entity-name="com.mcm2.tracking.Village" table="village" name="com.mcm2.tracking.Village" schema="public">
+        <id name="villageId" type="integer">
+            <column name="village_id" length="255" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="villageName" type="string">
+            <column name="village_name" length="255" not-null="false" precision="19"/>
+        </property>
+        <many-to-one name="ward" class="com.mcm2.tracking.Ward" fetch="select">
+            <column name="ward" length="255" not-null="false" precision="19"/>
+        </many-to-one>
+        <set name="hamlets" table="village" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="village"/>
+            </key>
+            <one-to-many class="com.mcm2.tracking.Hamlet"/>
+        </set>
+    </class>
+    <class entity-name="com.mcm2.tracking.District" table="district" name="com.mcm2.tracking.District" schema="public">
+        <id name="id" type="integer">
+            <column name="id" length="255" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="district" type="string">
+            <column name="district" length="255" not-null="false" precision="19"/>
+        </property>
+        <set name="wards" table="district" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="district"/>
+            </key>
+            <one-to-many class="com.mcm2.tracking.Ward"/>
+        </set>
+    </class>
+    <class entity-name="com.mcm2.tracking.Patient" table="patient" name="com.mcm2.tracking.Patient" schema="public">
+        <id name="patientId" type="integer">
+            <column name="patient_id" length="255" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="identifier" type="integer">
+            <column name="identifier" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="firstName" type="string">
+            <column name="first_name" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="middleName" type="string">
+            <column name="middle_name" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="lastName" type="string">
+            <column name="last_name" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="dateOfBirth" type="date">
+            <column name="date_of_birth" length="13" not-null="false" precision="19"/>
+        </property>
+        <property name="sex" type="string">
+            <column name="sex" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="street" type="string">
+            <column name="street" length="255" not-null="false" precision="19"/>
+        </property>
+        <many-to-one name="hamlet" class="com.mcm2.tracking.Hamlet" fetch="select">
+            <column name="hamlet" length="255" not-null="false" precision="19"/>
+        </many-to-one>
+        <set name="patientResultses" table="patient" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="patient"/>
+            </key>
+            <one-to-many class="com.mcm2.tracking.PatientResults"/>
+        </set>
+    </class>
+    <class entity-name="com.mcm2.tracking.HealthFacility" table="health_facility" name="com.mcm2.tracking.HealthFacility" schema="public">
+        <id name="id" type="integer">
+            <column name="id" length="255" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="facilityId" type="string">
+            <column name="facility_id" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="facilityName" type="string">
+            <column name="facility_name" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="facilityType" type="string">
+            <column name="facility_type" length="255" not-null="true" precision="19"/>
+        </property>
+        <many-to-one name="hamlet" class="com.mcm2.tracking.Hamlet" fetch="select">
+            <column name="hamlet" length="255" not-null="false" precision="19"/>
+        </many-to-one>
+        <set name="departments" table="health_facility" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="health_facility"/>
+            </key>
+            <one-to-many class="com.mcm2.tracking.Department"/>
+        </set>
+    </class>
+    <class entity-name="com.mcm2.tracking.Ward" table="ward" name="com.mcm2.tracking.Ward" schema="public">
+        <id name="wardId" type="short">
+            <column name="ward_id" length="255" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="wardName" type="string">
+            <column name="ward_name" length="255" not-null="false" precision="19"/>
+        </property>
+        <many-to-one name="district" class="com.mcm2.tracking.District" fetch="select">
+            <column name="district" length="255" not-null="false" precision="19"/>
+        </many-to-one>
+        <set name="villages" table="ward" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ward"/>
+            </key>
+            <one-to-many class="com.mcm2.tracking.Village"/>
+        </set>
+    </class>
+</hibernate-mapping>
