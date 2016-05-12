@@ -12,43 +12,6 @@ wm.types = {
 			"primitiveType": "String",
 			"internal": true
 		},
-		"com.mcm2.tracking.Department": {
-			"service": "tracking",
-			"liveService": false,
-			"internal": false,
-			"fields": {
-				"department": {
-					"isList": false,
-					"fieldSubType": null,
-					"exclude": [],
-					"type": "java.lang.String",
-					"required": true,
-					"fieldOrder": 2,
-					"noChange": [],
-					"include": []
-				},
-				"healthFacility": {
-					"isList": false,
-					"fieldSubType": null,
-					"exclude": [],
-					"type": "com.mcm2.tracking.HealthFacility",
-					"required": true,
-					"fieldOrder": 1,
-					"noChange": [],
-					"include": []
-				},
-				"id": {
-					"isList": false,
-					"fieldSubType": null,
-					"exclude": [],
-					"type": "java.lang.Integer",
-					"required": true,
-					"fieldOrder": 0,
-					"noChange": [],
-					"include": []
-				}
-			}
-		},
 		"com.mcm2.tracking.District": {
 			"service": "tracking",
 			"liveService": false,
@@ -148,16 +111,6 @@ wm.types = {
 			"liveService": false,
 			"internal": false,
 			"fields": {
-				"departments": {
-					"isList": true,
-					"fieldSubType": null,
-					"exclude": [],
-					"type": "com.mcm2.tracking.Department",
-					"required": false,
-					"fieldOrder": 5,
-					"noChange": [],
-					"include": []
-				},
 				"facilityId": {
 					"isList": false,
 					"fieldSubType": null,
@@ -198,6 +151,16 @@ wm.types = {
 					"noChange": [],
 					"include": []
 				},
+				"healthworkers": {
+					"isList": true,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "com.mcm2.tracking.Healthworker",
+					"required": false,
+					"fieldOrder": 5,
+					"noChange": [],
+					"include": []
+				},
 				"id": {
 					"isList": false,
 					"fieldSubType": null,
@@ -215,16 +178,6 @@ wm.types = {
 			"liveService": false,
 			"internal": false,
 			"fields": {
-				"department": {
-					"isList": false,
-					"fieldSubType": null,
-					"exclude": [],
-					"type": "java.lang.Integer",
-					"required": true,
-					"fieldOrder": 5,
-					"noChange": [],
-					"include": []
-				},
 				"firstName": {
 					"isList": false,
 					"fieldSubType": null,
@@ -239,7 +192,7 @@ wm.types = {
 					"isList": false,
 					"fieldSubType": null,
 					"exclude": [],
-					"type": "java.lang.Integer",
+					"type": "com.mcm2.tracking.HealthFacility",
 					"required": true,
 					"fieldOrder": 1,
 					"noChange": [],

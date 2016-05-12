@@ -7,7 +7,6 @@
                     <list>
                         <value>com.mcm2.tracking.Hamlet</value>
                         <value>com.mcm2.tracking.Healthworker</value>
-                        <value>com.mcm2.tracking.Department</value>
                         <value>com.mcm2.tracking.PatientResults</value>
                         <value>com.mcm2.tracking.Village</value>
                         <value>com.mcm2.tracking.District</value>

@@ -32,181 +32,8 @@
 		"category": "wm.Variable",
 		"_id": "wm-wm.Variable1402640443182"
 	},
-	"TrackingDepartmentData": {
-		"type": "Department",
-		"isList": true,
-		"owner": "App",
-		"dataSet": {
-			"dataValue": ""
-		},
-		"dataBinding": [
-			{
-				"name": "dataBinding",
-				"type": "object",
-				"fields": []
-			}
-		],
-		"saveInPhonegap": false,
-		"firstRow": 0,
-		"maxResults": 20,
-		"designMaxResults": 10,
-		"operation": "read",
-		"startUpdate": false,
-		"autoUpdate": true,
-		"inFlightBehavior": "executeLast",
-		"transformationRequired": false,
-		"liveSource": "tracking",
-		"ignoreCase": false,
-		"matchMode": "start",
-		"category": "wm.LiveVariable",
-		"isDefault": true,
-		"dbSystem": "PostgreSQL",
-		"_id": "wm-TrackingDepartmentData-wm.LiveVariable-1463046379267",
-		"package": "com.mcm2.tracking.Department",
-		"tableName": "department",
-		"tableType": "TABLE",
-		"properties": [
-			"healthFacility"
-		],
-		"relatedTables": [
-			{
-				"columnName": "healthFacility",
-				"relationName": "healthFacility",
-				"type": "HealthFacility",
-				"package": "com.mcm2.tracking.Department",
-				"watchOn": "TrackingHealthFacilityData"
-			}
-		],
-		"propertiesMap": {
-			"columns": [
-				{
-					"fieldName": "id",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "id",
-					"isPrimaryKey": true,
-					"notNull": true,
-					"length": 255,
-					"precision": 19,
-					"generator": "identity",
-					"isRelated": false,
-					"defaultValue": null
-				},
-				{
-					"fieldName": "healthFacility",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "health_facility",
-					"isPrimaryKey": false,
-					"notNull": true,
-					"length": 255,
-					"precision": 19,
-					"generator": null,
-					"isRelated": true,
-					"defaultValue": null,
-					"relatedTableName": "health_facility",
-					"relatedEntityName": "HealthFacility",
-					"columns": [
-						{
-							"fieldName": "id",
-							"type": "integer",
-							"hibernateType": "integer",
-							"fullyQualifiedType": "integer",
-							"columnName": "id",
-							"isPrimaryKey": true,
-							"notNull": true,
-							"length": 255,
-							"precision": 19,
-							"generator": "identity",
-							"isRelated": false,
-							"defaultValue": null
-						},
-						{
-							"fieldName": "facilityId",
-							"type": "string",
-							"hibernateType": "string",
-							"fullyQualifiedType": "string",
-							"columnName": "facility_id",
-							"isPrimaryKey": false,
-							"notNull": true,
-							"length": 255,
-							"precision": 19,
-							"generator": null,
-							"isRelated": false,
-							"defaultValue": null
-						},
-						{
-							"fieldName": "facilityName",
-							"type": "string",
-							"hibernateType": "string",
-							"fullyQualifiedType": "string",
-							"columnName": "facility_name",
-							"isPrimaryKey": false,
-							"notNull": true,
-							"length": 255,
-							"precision": 19,
-							"generator": null,
-							"isRelated": false,
-							"defaultValue": null
-						},
-						{
-							"fieldName": "facilityType",
-							"type": "string",
-							"hibernateType": "string",
-							"fullyQualifiedType": "string",
-							"columnName": "facility_type",
-							"isPrimaryKey": false,
-							"notNull": true,
-							"length": 255,
-							"precision": 19,
-							"generator": null,
-							"isRelated": false,
-							"defaultValue": null
-						},
-						{
-							"fieldName": "hamlet",
-							"type": "integer",
-							"hibernateType": "integer",
-							"fullyQualifiedType": "integer",
-							"columnName": "hamlet",
-							"isPrimaryKey": false,
-							"notNull": false,
-							"length": 255,
-							"precision": 19,
-							"generator": "assigned",
-							"isRelated": true,
-							"defaultValue": null
-						}
-					],
-					"relatedFieldName": "healthFacility.id",
-					"isList": false
-				},
-				{
-					"fieldName": "department",
-					"type": "string",
-					"hibernateType": "string",
-					"fullyQualifiedType": "string",
-					"columnName": "department",
-					"isPrimaryKey": false,
-					"notNull": true,
-					"length": 255,
-					"precision": 19,
-					"generator": null,
-					"isRelated": false,
-					"defaultValue": null
-				}
-			],
-			"primaryKeys": [
-				"id"
-			],
-			"entityName": "Department",
-			"fullyQualifiedName": "com.mcm2.tracking.Department",
-			"tableType": "TABLE"
-		}
-	},
 	"TrackingDistrictData": {
+		"name": "TrackingDistrictData",
 		"type": "District",
 		"isList": true,
 		"owner": "App",
@@ -225,7 +52,7 @@
 		"maxResults": 20,
 		"designMaxResults": 10,
 		"operation": "read",
-		"startUpdate": false,
+		"startUpdate": true,
 		"autoUpdate": true,
 		"inFlightBehavior": "executeLast",
 		"transformationRequired": false,
@@ -276,7 +103,8 @@
 			"entityName": "District",
 			"fullyQualifiedName": "com.mcm2.tracking.District",
 			"tableType": "TABLE"
-		}
+		},
+		"bindCount": 2
 	},
 	"TrackingHamletData": {
 		"name": "TrackingHamletData",
@@ -298,7 +126,7 @@
 		"maxResults": 20,
 		"designMaxResults": 10,
 		"operation": "read",
-		"startUpdate": false,
+		"startUpdate": true,
 		"autoUpdate": true,
 		"inFlightBehavior": "executeLast",
 		"transformationRequired": false,
@@ -382,7 +210,8 @@
 							"precision": 19,
 							"generator": "identity",
 							"isRelated": false,
-							"defaultValue": null
+							"defaultValue": null,
+							"isRelatedPk": "true"
 						},
 						{
 							"fieldName": "villageName",
@@ -396,7 +225,8 @@
 							"precision": 19,
 							"generator": null,
 							"isRelated": false,
-							"defaultValue": null
+							"defaultValue": null,
+							"disableInlineEditing": "true"
 						},
 						{
 							"fieldName": "ward",
@@ -410,11 +240,13 @@
 							"precision": 19,
 							"generator": null,
 							"isRelated": true,
-							"defaultValue": null
+							"defaultValue": null,
+							"disableInlineEditing": "true"
 						}
 					],
 					"relatedFieldName": "village.villageId",
-					"isList": false
+					"isList": false,
+					"disableInlineEditing": "true"
 				}
 			],
 			"primaryKeys": [
@@ -423,9 +255,11 @@
 			"entityName": "Hamlet",
 			"fullyQualifiedName": "com.mcm2.tracking.Hamlet",
 			"tableType": "TABLE"
-		}
+		},
+		"bindCount": 2
 	},
 	"TrackingHealthFacilityData": {
+		"name": "TrackingHealthFacilityData",
 		"type": "HealthFacility",
 		"isList": true,
 		"owner": "App",
@@ -444,7 +278,7 @@
 		"maxResults": 20,
 		"designMaxResults": 10,
 		"operation": "read",
-		"startUpdate": false,
+		"startUpdate": true,
 		"autoUpdate": true,
 		"inFlightBehavior": "executeLast",
 		"transformationRequired": false,
@@ -556,7 +390,8 @@
 							"precision": 19,
 							"generator": "identity",
 							"isRelated": false,
-							"defaultValue": null
+							"defaultValue": null,
+							"isRelatedPk": "true"
 						},
 						{
 							"fieldName": "hamletName",
@@ -570,7 +405,8 @@
 							"precision": 19,
 							"generator": null,
 							"isRelated": false,
-							"defaultValue": null
+							"defaultValue": null,
+							"disableInlineEditing": "true"
 						},
 						{
 							"fieldName": "village",
@@ -584,11 +420,13 @@
 							"precision": 19,
 							"generator": null,
 							"isRelated": true,
-							"defaultValue": null
+							"defaultValue": null,
+							"disableInlineEditing": "true"
 						}
 					],
 					"relatedFieldName": "hamlet.hamletId",
-					"isList": false
+					"isList": false,
+					"disableInlineEditing": "true"
 				}
 			],
 			"primaryKeys": [
@@ -597,9 +435,11 @@
 			"entityName": "HealthFacility",
 			"fullyQualifiedName": "com.mcm2.tracking.HealthFacility",
 			"tableType": "TABLE"
-		}
+		},
+		"bindCount": 2
 	},
 	"TrackingHealthworkerData": {
+		"name": "TrackingHealthworkerData",
 		"type": "Healthworker",
 		"isList": true,
 		"owner": "App",
@@ -618,7 +458,7 @@
 		"maxResults": 20,
 		"designMaxResults": 10,
 		"operation": "read",
-		"startUpdate": false,
+		"startUpdate": true,
 		"autoUpdate": true,
 		"inFlightBehavior": "executeLast",
 		"transformationRequired": false,
@@ -703,20 +543,6 @@
 					"generator": null,
 					"isRelated": false,
 					"defaultValue": null
-				},
-				{
-					"fieldName": "department",
-					"type": "integer",
-					"hibernateType": "integer",
-					"fullyQualifiedType": "integer",
-					"columnName": "department",
-					"isPrimaryKey": false,
-					"notNull": true,
-					"length": 255,
-					"precision": 19,
-					"generator": null,
-					"isRelated": false,
-					"defaultValue": null
 				}
 			],
 			"primaryKeys": [
@@ -725,9 +551,11 @@
 			"entityName": "Healthworker",
 			"fullyQualifiedName": "com.mcm2.tracking.Healthworker",
 			"tableType": "TABLE"
-		}
+		},
+		"bindCount": 2
 	},
 	"TrackingPatientData": {
+		"name": "TrackingPatientData",
 		"type": "Patient",
 		"isList": true,
 		"owner": "App",
@@ -959,6 +787,7 @@
 		"bindCount": 2
 	},
 	"TrackingPatientResultsData": {
+		"name": "TrackingPatientResultsData",
 		"type": "PatientResults",
 		"isList": true,
 		"owner": "App",
@@ -1047,7 +876,8 @@
 							"precision": 19,
 							"generator": "identity",
 							"isRelated": false,
-							"defaultValue": null
+							"defaultValue": null,
+							"isRelatedPk": "true"
 						},
 						{
 							"fieldName": "identifier",
@@ -1061,7 +891,8 @@
 							"precision": 19,
 							"generator": null,
 							"isRelated": false,
-							"defaultValue": null
+							"defaultValue": null,
+							"disableInlineEditing": "true"
 						},
 						{
 							"fieldName": "firstName",
@@ -1075,7 +906,8 @@
 							"precision": 19,
 							"generator": null,
 							"isRelated": false,
-							"defaultValue": null
+							"defaultValue": null,
+							"disableInlineEditing": "true"
 						},
 						{
 							"fieldName": "middleName",
@@ -1089,7 +921,8 @@
 							"precision": 19,
 							"generator": null,
 							"isRelated": false,
-							"defaultValue": null
+							"defaultValue": null,
+							"disableInlineEditing": "true"
 						},
 						{
 							"fieldName": "lastName",
@@ -1103,7 +936,8 @@
 							"precision": 19,
 							"generator": null,
 							"isRelated": false,
-							"defaultValue": null
+							"defaultValue": null,
+							"disableInlineEditing": "true"
 						},
 						{
 							"fieldName": "dateOfBirth",
@@ -1117,7 +951,8 @@
 							"precision": 19,
 							"generator": null,
 							"isRelated": false,
-							"defaultValue": null
+							"defaultValue": null,
+							"disableInlineEditing": "true"
 						},
 						{
 							"fieldName": "sex",
@@ -1131,7 +966,8 @@
 							"precision": 19,
 							"generator": null,
 							"isRelated": false,
-							"defaultValue": null
+							"defaultValue": null,
+							"disableInlineEditing": "true"
 						},
 						{
 							"fieldName": "hamlet",
@@ -1145,7 +981,8 @@
 							"precision": 19,
 							"generator": "assigned",
 							"isRelated": true,
-							"defaultValue": null
+							"defaultValue": null,
+							"disableInlineEditing": "true"
 						},
 						{
 							"fieldName": "street",
@@ -1159,11 +996,13 @@
 							"precision": 19,
 							"generator": null,
 							"isRelated": false,
-							"defaultValue": null
+							"defaultValue": null,
+							"disableInlineEditing": "true"
 						}
 					],
 					"relatedFieldName": "patient.patientId",
-					"isList": false
+					"isList": false,
+					"disableInlineEditing": "true"
 				},
 				{
 					"fieldName": "testDate",
@@ -1274,6 +1113,7 @@
 		"bindCount": 2
 	},
 	"TrackingVillageData": {
+		"name": "TrackingVillageData",
 		"type": "Village",
 		"isList": true,
 		"owner": "App",
@@ -1292,7 +1132,7 @@
 		"maxResults": 20,
 		"designMaxResults": 10,
 		"operation": "read",
-		"startUpdate": false,
+		"startUpdate": true,
 		"autoUpdate": true,
 		"inFlightBehavior": "executeLast",
 		"transformationRequired": false,
@@ -1376,7 +1216,8 @@
 							"precision": 19,
 							"generator": "identity",
 							"isRelated": false,
-							"defaultValue": null
+							"defaultValue": null,
+							"isRelatedPk": "true"
 						},
 						{
 							"fieldName": "wardName",
@@ -1390,7 +1231,8 @@
 							"precision": 19,
 							"generator": null,
 							"isRelated": false,
-							"defaultValue": null
+							"defaultValue": null,
+							"disableInlineEditing": "true"
 						},
 						{
 							"fieldName": "district",
@@ -1404,11 +1246,13 @@
 							"precision": 19,
 							"generator": "assigned",
 							"isRelated": true,
-							"defaultValue": null
+							"defaultValue": null,
+							"disableInlineEditing": "true"
 						}
 					],
 					"relatedFieldName": "ward.wardId",
-					"isList": false
+					"isList": false,
+					"disableInlineEditing": "true"
 				}
 			],
 			"primaryKeys": [
@@ -1417,9 +1261,11 @@
 			"entityName": "Village",
 			"fullyQualifiedName": "com.mcm2.tracking.Village",
 			"tableType": "TABLE"
-		}
+		},
+		"bindCount": 2
 	},
 	"TrackingWardData": {
+		"name": "TrackingWardData",
 		"type": "Ward",
 		"isList": true,
 		"owner": "App",
@@ -1438,7 +1284,7 @@
 		"maxResults": 20,
 		"designMaxResults": 10,
 		"operation": "read",
-		"startUpdate": false,
+		"startUpdate": true,
 		"autoUpdate": true,
 		"inFlightBehavior": "executeLast",
 		"transformationRequired": false,
@@ -1522,7 +1368,8 @@
 							"precision": 19,
 							"generator": "identity",
 							"isRelated": false,
-							"defaultValue": null
+							"defaultValue": null,
+							"isRelatedPk": "true"
 						},
 						{
 							"fieldName": "district",
@@ -1536,11 +1383,13 @@
 							"precision": 19,
 							"generator": null,
 							"isRelated": false,
-							"defaultValue": null
+							"defaultValue": null,
+							"disableInlineEditing": "true"
 						}
 					],
 					"relatedFieldName": "district.id",
-					"isList": false
+					"isList": false,
+					"disableInlineEditing": "true"
 				}
 			],
 			"primaryKeys": [
@@ -1549,9 +1398,11 @@
 			"entityName": "Ward",
 			"fullyQualifiedName": "com.mcm2.tracking.Ward",
 			"tableType": "TABLE"
-		}
+		},
+		"bindCount": 2
 	},
 	"goToPage-Registration": {
+		"name": "goToPage-Registration",
 		"owner": "App",
 		"operation": "gotoPage",
 		"pageName": "Registration",
@@ -1560,11 +1411,28 @@
 		"_id": "wm-goToPage-Registration-wm.NavigationVariable-1463046521823"
 	},
 	"goToPage-Laboratory": {
+		"name": "goToPage-Laboratory",
 		"owner": "App",
 		"operation": "gotoPage",
 		"pageName": "Laboratory",
 		"dataBinding": {},
 		"category": "wm.NavigationVariable",
 		"_id": "wm-goToPage-Laboratory-wm.NavigationVariable-1463051691686"
+	},
+	"goToPage-Administration": {
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "Administration",
+		"dataBinding": {},
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage-Administration-wm.NavigationVariable-1463053925130"
+	},
+	"goToPage-DataEntry": {
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "DataEntry",
+		"dataBinding": {},
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage-DataEntry-wm.NavigationVariable-1463059394403"
 	}
 }

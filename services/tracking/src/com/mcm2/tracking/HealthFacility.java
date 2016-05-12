@@ -45,7 +45,7 @@ private String facilityId;
 private String facilityName;
 private String facilityType;
 private Hamlet hamlet;
-private Set<Department> departments = new HashSet<Department>(0);
+private Set<Healthworker> healthworkers = new HashSet<Healthworker>(0);
 
     public HealthFacility() {
     }
@@ -109,12 +109,12 @@ private Set<Department> departments = new HashSet<Department>(0);
     }
 
 @OneToMany(fetch=FetchType.LAZY, cascade = {CascadeType.ALL}, mappedBy="healthFacility")
-    public Set<Department> getDepartments() {
-        return this.departments;
+    public Set<Healthworker> getHealthworkers() {
+        return this.healthworkers;
     }
     
-    public void setDepartments(Set<Department> departments) {
-        this.departments = departments;
+    public void setHealthworkers(Set<Healthworker> healthworkers) {
+        this.healthworkers = healthworkers;
     }
 
 

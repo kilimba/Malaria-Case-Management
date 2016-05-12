@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="com.mcm2.tracking">
-    <class entity-name="com.mcm2.tracking.Hamlet" table="hamlet" name="com.mcm2.tracking.Hamlet" schema="public">
+    <class entity-name="com.mcm2.tracking.Hamlet" table="hamlet" schema="public">
         <id name="hamletId" type="integer">
             <column name="hamlet_id" length="255" not-null="true" precision="19"/>
             <generator class="identity"/>
@@ -25,7 +25,7 @@
             <one-to-many class="com.mcm2.tracking.HealthFacility"/>
         </set>
     </class>
-    <class entity-name="com.mcm2.tracking.Healthworker" table="healthworker" name="com.mcm2.tracking.Healthworker" schema="public">
+    <class entity-name="com.mcm2.tracking.Healthworker" table="healthworker" schema="public">
         <id name="id" type="integer">
             <column name="id" length="255" not-null="true" precision="19"/>
             <generator class="identity"/>
@@ -39,11 +39,26 @@
         <property name="surname" type="string">
             <column name="surname" length="255" not-null="true" precision="19"/>
         </property>
+        <property name="department" type="integer">
+            <column name="department" length="255" not-null="true" precision="19"/>
+        </property>
         <many-to-one name="healthFacility" class="com.mcm2.tracking.HealthFacility" fetch="select">
             <column name="health_facility" length="255" not-null="true" precision="19"/>
         </many-to-one>
     </class>
-    <class entity-name="com.mcm2.tracking.PatientResults" table="patient_results" name="com.mcm2.tracking.PatientResults" schema="public">
+    <class entity-name="com.mcm2.tracking.Department" table="department" schema="public">
+        <id name="id" type="integer">
+            <column name="id" length="255" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="department" type="string">
+            <column name="department" length="255" not-null="true" precision="19"/>
+        </property>
+        <many-to-one name="healthFacility" class="com.mcm2.tracking.HealthFacility" fetch="select">
+            <column name="health_facility" length="255" not-null="true" precision="19"/>
+        </many-to-one>
+    </class>
+    <class entity-name="com.mcm2.tracking.PatientResults" table="patient_results" schema="public">
         <id name="resultsId" type="integer">
             <column name="results_id" length="255" not-null="true" precision="19"/>
             <generator class="identity"/>
@@ -73,7 +88,7 @@
             <column name="patient" length="255" not-null="false" precision="19"/>
         </many-to-one>
     </class>
-    <class entity-name="com.mcm2.tracking.Village" table="village" name="com.mcm2.tracking.Village" schema="public">
+    <class entity-name="com.mcm2.tracking.Village" table="village" schema="public">
         <id name="villageId" type="integer">
             <column name="village_id" length="255" not-null="true" precision="19"/>
             <generator class="identity"/>
@@ -91,7 +106,7 @@
             <one-to-many class="com.mcm2.tracking.Hamlet"/>
         </set>
     </class>
-    <class entity-name="com.mcm2.tracking.District" table="district" name="com.mcm2.tracking.District" schema="public">
+    <class entity-name="com.mcm2.tracking.District" table="district" schema="public">
         <id name="id" type="integer">
             <column name="id" length="255" not-null="true" precision="19"/>
             <generator class="identity"/>
@@ -106,7 +121,7 @@
             <one-to-many class="com.mcm2.tracking.Ward"/>
         </set>
     </class>
-    <class entity-name="com.mcm2.tracking.Patient" table="patient" name="com.mcm2.tracking.Patient" schema="public">
+    <class entity-name="com.mcm2.tracking.Patient" table="patient" schema="public">
         <id name="patientId" type="integer">
             <column name="patient_id" length="255" not-null="true" precision="19"/>
             <generator class="identity"/>
@@ -142,7 +157,7 @@
             <one-to-many class="com.mcm2.tracking.PatientResults"/>
         </set>
     </class>
-    <class entity-name="com.mcm2.tracking.HealthFacility" table="health_facility" name="com.mcm2.tracking.HealthFacility" schema="public">
+    <class entity-name="com.mcm2.tracking.HealthFacility" table="health_facility" schema="public">
         <id name="id" type="integer">
             <column name="id" length="255" not-null="true" precision="19"/>
             <generator class="identity"/>
@@ -165,8 +180,14 @@
             </key>
             <one-to-many class="com.mcm2.tracking.Healthworker"/>
         </set>
+        <set name="departments" table="health_facility" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="health_facility"/>
+            </key>
+            <one-to-many class="com.mcm2.tracking.Department"/>
+        </set>
     </class>
-    <class entity-name="com.mcm2.tracking.Ward" table="ward" name="com.mcm2.tracking.Ward" schema="public">
+    <class entity-name="com.mcm2.tracking.Ward" table="ward" schema="public">
         <id name="wardId" type="short">
             <column name="ward_id" length="255" not-null="true" precision="19"/>
             <generator class="identity"/>

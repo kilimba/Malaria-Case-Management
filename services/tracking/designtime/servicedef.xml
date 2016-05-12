@@ -10,16 +10,10 @@
         </dataobject>
         <dataobject javaType="com.mcm2.tracking.Healthworker">
             <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
-            <element name="healthFacility" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="healthFacility" typeRef="com.mcm2.tracking.HealthFacility" isList="false" allowNull="false"/>
             <element name="firstName" typeRef="java.lang.String" isList="false" allowNull="false"/>
             <element name="middleName" typeRef="java.lang.String" isList="false" allowNull="true"/>
             <element name="surname" typeRef="java.lang.String" isList="false" allowNull="false"/>
-            <element name="department" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
-        </dataobject>
-        <dataobject javaType="com.mcm2.tracking.Department">
-            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
-            <element name="healthFacility" typeRef="com.mcm2.tracking.HealthFacility" isList="false" allowNull="false"/>
-            <element name="department" typeRef="java.lang.String" isList="false" allowNull="false"/>
         </dataobject>
         <dataobject javaType="com.mcm2.tracking.PatientResults">
             <element name="resultsId" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
@@ -61,7 +55,7 @@
             <element name="facilityId" typeRef="java.lang.String" isList="false" allowNull="false"/>
             <element name="facilityName" typeRef="java.lang.String" isList="false" allowNull="false"/>
             <element name="facilityType" typeRef="java.lang.String" isList="false" allowNull="false"/>
-            <element name="departments" typeRef="com.mcm2.tracking.Department" isList="true" allowNull="true"/>
+            <element name="healthworkers" typeRef="com.mcm2.tracking.Healthworker" isList="true" allowNull="true"/>
         </dataobject>
         <dataobject javaType="com.mcm2.tracking.Ward">
             <element name="wardId" typeRef="java.lang.Short" isList="false" allowNull="false"/>

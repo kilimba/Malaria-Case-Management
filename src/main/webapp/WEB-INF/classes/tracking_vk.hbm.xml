@@ -30,9 +30,6 @@
             <column name="id" length="255" not-null="true" precision="19"/>
             <generator class="identity"/>
         </id>
-        <property name="healthFacility" type="integer">
-            <column name="health_facility" length="255" not-null="true" precision="19"/>
-        </property>
         <property name="firstName" type="string">
             <column name="first_name" length="255" not-null="true" precision="19"/>
         </property>
@@ -41,18 +38,6 @@
         </property>
         <property name="surname" type="string">
             <column name="surname" length="255" not-null="true" precision="19"/>
-        </property>
-        <property name="department" type="integer">
-            <column name="department" length="255" not-null="true" precision="19"/>
-        </property>
-    </class>
-    <class entity-name="com.mcm2.tracking.Department" table="department" name="com.mcm2.tracking.Department" schema="public">
-        <id name="id" type="integer">
-            <column name="id" length="255" not-null="true" precision="19"/>
-            <generator class="identity"/>
-        </id>
-        <property name="department" type="string">
-            <column name="department" length="255" not-null="true" precision="19"/>
         </property>
         <many-to-one name="healthFacility" class="com.mcm2.tracking.HealthFacility" fetch="select">
             <column name="health_facility" length="255" not-null="true" precision="19"/>
@@ -174,11 +159,11 @@
         <many-to-one name="hamlet" class="com.mcm2.tracking.Hamlet" fetch="select">
             <column name="hamlet" length="255" not-null="false" precision="19"/>
         </many-to-one>
-        <set name="departments" table="health_facility" inverse="true" lazy="true" fetch="select">
+        <set name="healthworkers" table="health_facility" inverse="true" lazy="true" fetch="select">
             <key>
                 <column name="health_facility"/>
             </key>
-            <one-to-many class="com.mcm2.tracking.Department"/>
+            <one-to-many class="com.mcm2.tracking.Healthworker"/>
         </set>
     </class>
     <class entity-name="com.mcm2.tracking.Ward" table="ward" name="com.mcm2.tracking.Ward" schema="public">

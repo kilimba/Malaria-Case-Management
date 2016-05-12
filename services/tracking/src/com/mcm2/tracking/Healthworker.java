@@ -8,9 +8,12 @@ package com.mcm2.tracking;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 
@@ -35,11 +38,10 @@ public class Healthworker  implements java.io.Serializable
 
 
 private Integer id;
-private Integer healthFacility;
 private String firstName;
 private String middleName;
 private String surname;
-private Integer department;
+private HealthFacility healthFacility;
 
     public Healthworker() {
     }
@@ -57,17 +59,6 @@ private Integer department;
     
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    
-
-    @Column(name="health_facility", nullable=false)
-    public Integer getHealthFacility() {
-        return this.healthFacility;
-    }
-    
-    public void setHealthFacility(Integer healthFacility) {
-        this.healthFacility = healthFacility;
     }
 
     
@@ -103,15 +94,14 @@ private Integer department;
         this.surname = surname;
     }
 
-    
-
-    @Column(name="department", nullable=false)
-    public Integer getDepartment() {
-        return this.department;
+@ManyToOne(fetch=FetchType.EAGER)
+    @JoinColumn(name="health_facility", nullable=false)
+    public HealthFacility getHealthFacility() {
+        return this.healthFacility;
     }
     
-    public void setDepartment(Integer department) {
-        this.department = department;
+    public void setHealthFacility(HealthFacility healthFacility) {
+        this.healthFacility = healthFacility;
     }
 
 
