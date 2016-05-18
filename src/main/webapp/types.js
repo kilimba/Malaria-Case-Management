@@ -12,6 +12,343 @@ wm.types = {
 			"primitiveType": "String",
 			"internal": true
 		},
+		"com.mcm2.tracking.BloodSlide": {
+			"service": "tracking",
+			"liveService": false,
+			"internal": false,
+			"fields": {
+				"comments": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.lang.String",
+					"required": false,
+					"fieldOrder": 31,
+					"noChange": [],
+					"include": []
+				},
+				"dateCollected": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.util.Date",
+					"required": true,
+					"fieldOrder": 7,
+					"noChange": [],
+					"include": []
+				},
+				"dateRead": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.util.Date",
+					"required": true,
+					"fieldOrder": 10,
+					"noChange": [],
+					"include": []
+				},
+				"firstName": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.lang.String",
+					"required": true,
+					"fieldOrder": 3,
+					"noChange": [],
+					"include": []
+				},
+				"hamlet": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "com.mcm2.tracking.Hamlet",
+					"required": false,
+					"fieldOrder": 1,
+					"noChange": [],
+					"include": []
+				},
+				"id": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.lang.Integer",
+					"required": true,
+					"fieldOrder": 0,
+					"noChange": [],
+					"include": []
+				},
+				"interviewerInitials": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.lang.String",
+					"required": true,
+					"fieldOrder": 9,
+					"noChange": [],
+					"include": []
+				},
+				"knowHamlet": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.lang.String",
+					"required": true,
+					"fieldOrder": 6,
+					"noChange": [],
+					"include": []
+				},
+				"labTechInitials": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.lang.String",
+					"required": true,
+					"fieldOrder": 32,
+					"noChange": [],
+					"include": []
+				},
+				"middleName": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.lang.String",
+					"required": false,
+					"fieldOrder": 4,
+					"noChange": [],
+					"include": []
+				},
+				"numGametocytes": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.lang.Integer",
+					"required": true,
+					"fieldOrder": 27,
+					"noChange": [],
+					"include": []
+				},
+				"numInfectedRbc": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.lang.Integer",
+					"required": true,
+					"fieldOrder": 29,
+					"noChange": [],
+					"include": []
+				},
+				"numTrophozoites": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.lang.Integer",
+					"required": true,
+					"fieldOrder": 25,
+					"noChange": [],
+					"include": []
+				},
+				"numWbcAsexual": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.lang.Integer",
+					"required": true,
+					"fieldOrder": 26,
+					"noChange": [],
+					"include": []
+				},
+				"numWbcSexual": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.lang.Integer",
+					"required": true,
+					"fieldOrder": 28,
+					"noChange": [],
+					"include": []
+				},
+				"parasiteSeen": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.lang.String",
+					"required": true,
+					"fieldOrder": 24,
+					"noChange": [],
+					"include": []
+				},
+				"patientId": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.lang.String",
+					"required": true,
+					"fieldOrder": 2,
+					"noChange": [],
+					"include": []
+				},
+				"pfAsexual": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.lang.String",
+					"required": true,
+					"fieldOrder": 12,
+					"noChange": [],
+					"include": []
+				},
+				"pfGametocyte": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.lang.String",
+					"required": true,
+					"fieldOrder": 13,
+					"noChange": [],
+					"include": []
+				},
+				"pfSexual": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.lang.String",
+					"required": true,
+					"fieldOrder": 14,
+					"noChange": [],
+					"include": []
+				},
+				"pmAsexual": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.lang.String",
+					"required": true,
+					"fieldOrder": 15,
+					"noChange": [],
+					"include": []
+				},
+				"pmGametocyte": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.lang.String",
+					"required": true,
+					"fieldOrder": 16,
+					"noChange": [],
+					"include": []
+				},
+				"pmSexual": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.lang.String",
+					"required": true,
+					"fieldOrder": 17,
+					"noChange": [],
+					"include": []
+				},
+				"poAsexual": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.lang.String",
+					"required": true,
+					"fieldOrder": 18,
+					"noChange": [],
+					"include": []
+				},
+				"poGametocyte": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.lang.String",
+					"required": true,
+					"fieldOrder": 19,
+					"noChange": [],
+					"include": []
+				},
+				"poSexual": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.lang.String",
+					"required": true,
+					"fieldOrder": 20,
+					"noChange": [],
+					"include": []
+				},
+				"pvAsexual": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.lang.String",
+					"required": true,
+					"fieldOrder": 21,
+					"noChange": [],
+					"include": []
+				},
+				"pvGametocyte": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.lang.String",
+					"required": true,
+					"fieldOrder": 22,
+					"noChange": [],
+					"include": []
+				},
+				"pvSexual": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.lang.String",
+					"required": true,
+					"fieldOrder": 23,
+					"noChange": [],
+					"include": []
+				},
+				"reader": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.lang.Integer",
+					"required": true,
+					"fieldOrder": 11,
+					"noChange": [],
+					"include": []
+				},
+				"surname": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.lang.String",
+					"required": true,
+					"fieldOrder": 5,
+					"noChange": [],
+					"include": []
+				},
+				"timeCollected": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.util.Date",
+					"required": true,
+					"fieldOrder": 8,
+					"noChange": [],
+					"include": []
+				},
+				"totalRbc": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "java.lang.Integer",
+					"required": true,
+					"fieldOrder": 30,
+					"noChange": [],
+					"include": []
+				}
+			}
+		},
 		"com.mcm2.tracking.District": {
 			"service": "tracking",
 			"liveService": false,
@@ -54,6 +391,16 @@ wm.types = {
 			"liveService": false,
 			"internal": false,
 			"fields": {
+				"bloodSlides": {
+					"isList": true,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "com.mcm2.tracking.BloodSlide",
+					"required": false,
+					"fieldOrder": 5,
+					"noChange": [],
+					"include": []
+				},
 				"hamletId": {
 					"isList": false,
 					"fieldSubType": null,

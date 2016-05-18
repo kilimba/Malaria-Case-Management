@@ -10,6 +10,7 @@
                         <value>com.mcm2.tracking.PatientResults</value>
                         <value>com.mcm2.tracking.Village</value>
                         <value>com.mcm2.tracking.District</value>
+                        <value>com.mcm2.tracking.BloodSlide</value>
                         <value>com.mcm2.tracking.Patient</value>
                         <value>com.mcm2.tracking.HealthFacility</value>
                         <value>com.mcm2.tracking.Ward</value>

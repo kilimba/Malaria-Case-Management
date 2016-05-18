@@ -45,6 +45,7 @@ private String hamletName;
 private Village village;
 private Set<Patient> patients = new HashSet<Patient>(0);
 private Set<HealthFacility> healthFacilities = new HashSet<HealthFacility>(0);
+private Set<BloodSlide> bloodSlides = new HashSet<BloodSlide>(0);
 
     public Hamlet() {
     }
@@ -101,6 +102,15 @@ private Set<HealthFacility> healthFacilities = new HashSet<HealthFacility>(0);
     
     public void setHealthFacilities(Set<HealthFacility> healthFacilities) {
         this.healthFacilities = healthFacilities;
+    }
+
+@OneToMany(fetch=FetchType.LAZY, cascade = {CascadeType.ALL}, mappedBy="hamlet")
+    public Set<BloodSlide> getBloodSlides() {
+        return this.bloodSlides;
+    }
+    
+    public void setBloodSlides(Set<BloodSlide> bloodSlides) {
+        this.bloodSlides = bloodSlides;
     }
 
 

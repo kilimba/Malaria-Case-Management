@@ -7,6 +7,7 @@
             <element name="hamletName" typeRef="java.lang.String" isList="false" allowNull="true"/>
             <element name="patients" typeRef="com.mcm2.tracking.Patient" isList="true" allowNull="true"/>
             <element name="healthFacilities" typeRef="com.mcm2.tracking.HealthFacility" isList="true" allowNull="true"/>
+            <element name="bloodSlides" typeRef="com.mcm2.tracking.BloodSlide" isList="true" allowNull="true"/>
         </dataobject>
         <dataobject javaType="com.mcm2.tracking.Healthworker">
             <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
@@ -36,6 +37,41 @@
             <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
             <element name="district" typeRef="java.lang.String" isList="false" allowNull="true"/>
             <element name="wards" typeRef="com.mcm2.tracking.Ward" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.mcm2.tracking.BloodSlide">
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="hamlet" typeRef="com.mcm2.tracking.Hamlet" isList="false" allowNull="true"/>
+            <element name="patientId" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="firstName" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="middleName" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="surname" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="knowHamlet" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="dateCollected" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="timeCollected" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="interviewerInitials" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="dateRead" typeRef="java.util.Date" isList="false" allowNull="false"/>
+            <element name="reader" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="pfAsexual" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="pfGametocyte" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="pfSexual" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="pmAsexual" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="pmGametocyte" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="pmSexual" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="poAsexual" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="poGametocyte" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="poSexual" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="pvAsexual" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="pvGametocyte" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="pvSexual" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="parasiteSeen" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="numTrophozoites" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="numWbcAsexual" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="numGametocytes" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="numWbcSexual" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="numInfectedRbc" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="totalRbc" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="comments" typeRef="java.lang.String" isList="false" allowNull="true"/>
+            <element name="labTechInitials" typeRef="java.lang.String" isList="false" allowNull="false"/>
         </dataobject>
         <dataobject javaType="com.mcm2.tracking.Patient">
             <element name="patientId" typeRef="java.lang.Integer" isList="false" allowNull="false"/>

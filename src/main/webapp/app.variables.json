@@ -210,8 +210,7 @@
 							"precision": 19,
 							"generator": "identity",
 							"isRelated": false,
-							"defaultValue": null,
-							"isRelatedPk": "true"
+							"defaultValue": null
 						},
 						{
 							"fieldName": "villageName",
@@ -225,8 +224,7 @@
 							"precision": 19,
 							"generator": null,
 							"isRelated": false,
-							"defaultValue": null,
-							"disableInlineEditing": "true"
+							"defaultValue": null
 						},
 						{
 							"fieldName": "ward",
@@ -240,13 +238,11 @@
 							"precision": 19,
 							"generator": null,
 							"isRelated": true,
-							"defaultValue": null,
-							"disableInlineEditing": "true"
+							"defaultValue": null
 						}
 					],
 					"relatedFieldName": "village.villageId",
-					"isList": false,
-					"disableInlineEditing": "true"
+					"isList": false
 				}
 			],
 			"primaryKeys": [
@@ -390,8 +386,7 @@
 							"precision": 19,
 							"generator": "identity",
 							"isRelated": false,
-							"defaultValue": null,
-							"isRelatedPk": "true"
+							"defaultValue": null
 						},
 						{
 							"fieldName": "hamletName",
@@ -405,8 +400,7 @@
 							"precision": 19,
 							"generator": null,
 							"isRelated": false,
-							"defaultValue": null,
-							"disableInlineEditing": "true"
+							"defaultValue": null
 						},
 						{
 							"fieldName": "village",
@@ -420,13 +414,11 @@
 							"precision": 19,
 							"generator": null,
 							"isRelated": true,
-							"defaultValue": null,
-							"disableInlineEditing": "true"
+							"defaultValue": null
 						}
 					],
 					"relatedFieldName": "hamlet.hamletId",
-					"isList": false,
-					"disableInlineEditing": "true"
+					"isList": false
 				}
 			],
 			"primaryKeys": [
@@ -876,8 +868,7 @@
 							"precision": 19,
 							"generator": "identity",
 							"isRelated": false,
-							"defaultValue": null,
-							"isRelatedPk": "true"
+							"defaultValue": null
 						},
 						{
 							"fieldName": "identifier",
@@ -891,8 +882,7 @@
 							"precision": 19,
 							"generator": null,
 							"isRelated": false,
-							"defaultValue": null,
-							"disableInlineEditing": "true"
+							"defaultValue": null
 						},
 						{
 							"fieldName": "firstName",
@@ -906,8 +896,7 @@
 							"precision": 19,
 							"generator": null,
 							"isRelated": false,
-							"defaultValue": null,
-							"disableInlineEditing": "true"
+							"defaultValue": null
 						},
 						{
 							"fieldName": "middleName",
@@ -921,8 +910,7 @@
 							"precision": 19,
 							"generator": null,
 							"isRelated": false,
-							"defaultValue": null,
-							"disableInlineEditing": "true"
+							"defaultValue": null
 						},
 						{
 							"fieldName": "lastName",
@@ -936,8 +924,7 @@
 							"precision": 19,
 							"generator": null,
 							"isRelated": false,
-							"defaultValue": null,
-							"disableInlineEditing": "true"
+							"defaultValue": null
 						},
 						{
 							"fieldName": "dateOfBirth",
@@ -951,8 +938,7 @@
 							"precision": 19,
 							"generator": null,
 							"isRelated": false,
-							"defaultValue": null,
-							"disableInlineEditing": "true"
+							"defaultValue": null
 						},
 						{
 							"fieldName": "sex",
@@ -966,8 +952,7 @@
 							"precision": 19,
 							"generator": null,
 							"isRelated": false,
-							"defaultValue": null,
-							"disableInlineEditing": "true"
+							"defaultValue": null
 						},
 						{
 							"fieldName": "hamlet",
@@ -981,8 +966,7 @@
 							"precision": 19,
 							"generator": "assigned",
 							"isRelated": true,
-							"defaultValue": null,
-							"disableInlineEditing": "true"
+							"defaultValue": null
 						},
 						{
 							"fieldName": "street",
@@ -996,13 +980,11 @@
 							"precision": 19,
 							"generator": null,
 							"isRelated": false,
-							"defaultValue": null,
-							"disableInlineEditing": "true"
+							"defaultValue": null
 						}
 					],
 					"relatedFieldName": "patient.patientId",
-					"isList": false,
-					"disableInlineEditing": "true"
+					"isList": false
 				},
 				{
 					"fieldName": "testDate",
@@ -1216,8 +1198,7 @@
 							"precision": 19,
 							"generator": "identity",
 							"isRelated": false,
-							"defaultValue": null,
-							"isRelatedPk": "true"
+							"defaultValue": null
 						},
 						{
 							"fieldName": "wardName",
@@ -1231,8 +1212,7 @@
 							"precision": 19,
 							"generator": null,
 							"isRelated": false,
-							"defaultValue": null,
-							"disableInlineEditing": "true"
+							"defaultValue": null
 						},
 						{
 							"fieldName": "district",
@@ -1246,13 +1226,11 @@
 							"precision": 19,
 							"generator": "assigned",
 							"isRelated": true,
-							"defaultValue": null,
-							"disableInlineEditing": "true"
+							"defaultValue": null
 						}
 					],
 					"relatedFieldName": "ward.wardId",
-					"isList": false,
-					"disableInlineEditing": "true"
+					"isList": false
 				}
 			],
 			"primaryKeys": [
@@ -1368,8 +1346,7 @@
 							"precision": 19,
 							"generator": "identity",
 							"isRelated": false,
-							"defaultValue": null,
-							"isRelatedPk": "true"
+							"defaultValue": null
 						},
 						{
 							"fieldName": "district",
@@ -1383,13 +1360,11 @@
 							"precision": 19,
 							"generator": null,
 							"isRelated": false,
-							"defaultValue": null,
-							"disableInlineEditing": "true"
+							"defaultValue": null
 						}
 					],
 					"relatedFieldName": "district.id",
-					"isList": false,
-					"disableInlineEditing": "true"
+					"isList": false
 				}
 			],
 			"primaryKeys": [
@@ -1434,5 +1409,577 @@
 		"dataBinding": {},
 		"category": "wm.NavigationVariable",
 		"_id": "wm-goToPage-DataEntry-wm.NavigationVariable-1463059394403"
+	},
+	"TrackingBloodSlideData": {
+		"name": "TrackingBloodSlideData",
+		"type": "BloodSlide",
+		"isList": true,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "object",
+				"fields": []
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 20,
+		"designMaxResults": 10,
+		"operation": "read",
+		"startUpdate": true,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"liveSource": "tracking",
+		"ignoreCase": false,
+		"matchMode": "start",
+		"category": "wm.LiveVariable",
+		"isDefault": true,
+		"dbSystem": "PostgreSQL",
+		"_id": "wm-TrackingBloodSlideData-wm.LiveVariable-1463066355916",
+		"package": "com.mcm2.tracking.BloodSlide",
+		"tableName": "blood_slide",
+		"tableType": "TABLE",
+		"properties": [
+			"hamlet"
+		],
+		"relatedTables": [
+			{
+				"columnName": "hamlet",
+				"relationName": "hamlet",
+				"type": "Hamlet",
+				"package": "com.mcm2.tracking.BloodSlide",
+				"watchOn": "TrackingHamletData"
+			}
+		],
+		"propertiesMap": {
+			"columns": [
+				{
+					"fieldName": "id",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "id",
+					"isPrimaryKey": true,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": "identity",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "patientId",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "patient_id",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "firstName",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "first_name",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "middleName",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "middle_name",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "surname",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "surname",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "knowHamlet",
+					"type": "boolean",
+					"hibernateType": "string",
+					"fullyQualifiedType": "boolean",
+					"columnName": "know_hamlet",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "hamlet",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "hamlet",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": true,
+					"defaultValue": null,
+					"relatedTableName": "hamlet",
+					"relatedEntityName": "Hamlet",
+					"columns": [
+						{
+							"fieldName": "hamletId",
+							"type": "integer",
+							"hibernateType": "integer",
+							"fullyQualifiedType": "integer",
+							"columnName": "hamlet_id",
+							"isPrimaryKey": true,
+							"notNull": true,
+							"length": 255,
+							"precision": 19,
+							"generator": "identity",
+							"isRelated": false,
+							"defaultValue": null,
+							"isRelatedPk": "true"
+						},
+						{
+							"fieldName": "hamletName",
+							"type": "string",
+							"hibernateType": "string",
+							"fullyQualifiedType": "string",
+							"columnName": "hamlet_name",
+							"isPrimaryKey": false,
+							"notNull": false,
+							"length": 255,
+							"precision": 19,
+							"generator": null,
+							"isRelated": false,
+							"defaultValue": null,
+							"disableInlineEditing": "true"
+						},
+						{
+							"fieldName": "village",
+							"type": "integer",
+							"hibernateType": "integer",
+							"fullyQualifiedType": "integer",
+							"columnName": "village",
+							"isPrimaryKey": false,
+							"notNull": false,
+							"length": 255,
+							"precision": 19,
+							"generator": null,
+							"isRelated": true,
+							"defaultValue": null,
+							"disableInlineEditing": "true"
+						}
+					],
+					"relatedFieldName": "hamlet.hamletId",
+					"isList": false,
+					"disableInlineEditing": "true"
+				},
+				{
+					"fieldName": "dateCollected",
+					"type": "date",
+					"hibernateType": "date",
+					"fullyQualifiedType": "date",
+					"columnName": "date_collected",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 13,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "timeCollected",
+					"type": "time",
+					"hibernateType": "time",
+					"fullyQualifiedType": "time",
+					"columnName": "time_collected",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 15,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "interviewerInitials",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "interviewer_initials",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 2,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "dateRead",
+					"type": "date",
+					"hibernateType": "date",
+					"fullyQualifiedType": "date",
+					"columnName": "date_read",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 13,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "reader",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "reader",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "pfAsexual",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "pf_asexual",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "pfGametocyte",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "pf_gametocyte",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "pfSexual",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "pf_sexual",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "pmAsexual",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "pm_asexual",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "pmGametocyte",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "pm_gametocyte",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "pmSexual",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "pm_sexual",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "poAsexual",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "po_asexual",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "poGametocyte",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "po_gametocyte",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "poSexual",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "po_sexual",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "pvAsexual",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "pv_asexual",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "pvGametocyte",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "pv_gametocyte",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "pvSexual",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "pv_sexual",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "parasiteSeen",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "parasite_seen",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "numTrophozoites",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "num_trophozoites",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "numWbcAsexual",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "num_wbc_asexual",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "numGametocytes",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "num_gametocytes",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "numWbcSexual",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "num_wbc_sexual",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "numInfectedRbc",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "num_infected_rbc",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "totalRbc",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "total_rbc",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "comments",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "comments",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "labTechInitials",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "lab_tech_initials",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 2,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				}
+			],
+			"primaryKeys": [
+				"id"
+			],
+			"entityName": "BloodSlide",
+			"fullyQualifiedName": "com.mcm2.tracking.BloodSlide",
+			"tableType": "TABLE"
+		},
+		"bindCount": 2
 	}
 }

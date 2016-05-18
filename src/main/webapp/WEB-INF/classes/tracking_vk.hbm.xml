@@ -24,6 +24,12 @@
             </key>
             <one-to-many class="com.mcm2.tracking.HealthFacility"/>
         </set>
+        <set name="bloodSlides" table="hamlet" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="hamlet"/>
+            </key>
+            <one-to-many class="com.mcm2.tracking.BloodSlide"/>
+        </set>
     </class>
     <class entity-name="com.mcm2.tracking.Healthworker" table="healthworker" name="com.mcm2.tracking.Healthworker" schema="public">
         <id name="id" type="integer">
@@ -105,6 +111,108 @@
             </key>
             <one-to-many class="com.mcm2.tracking.Ward"/>
         </set>
+    </class>
+    <class entity-name="com.mcm2.tracking.BloodSlide" table="blood_slide" name="com.mcm2.tracking.BloodSlide" schema="public">
+        <id name="id" type="integer">
+            <column name="id" length="255" not-null="true" precision="19"/>
+            <generator class="identity"/>
+        </id>
+        <property name="patientId" type="string">
+            <column name="patient_id" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="firstName" type="string">
+            <column name="first_name" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="middleName" type="string">
+            <column name="middle_name" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="surname" type="string">
+            <column name="surname" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="knowHamlet" type="boolean">
+            <column name="know_hamlet" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="dateCollected" type="date">
+            <column name="date_collected" length="13" not-null="true" precision="19"/>
+        </property>
+        <property name="timeCollected" type="time">
+            <column name="time_collected" length="15" not-null="true" precision="19"/>
+        </property>
+        <property name="interviewerInitials" type="string">
+            <column name="interviewer_initials" length="2" not-null="true" precision="19"/>
+        </property>
+        <property name="dateRead" type="date">
+            <column name="date_read" length="13" not-null="true" precision="19"/>
+        </property>
+        <property name="reader" type="integer">
+            <column name="reader" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="pfAsexual" type="string">
+            <column name="pf_asexual" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="pfGametocyte" type="string">
+            <column name="pf_gametocyte" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="pfSexual" type="string">
+            <column name="pf_sexual" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="pmAsexual" type="string">
+            <column name="pm_asexual" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="pmGametocyte" type="string">
+            <column name="pm_gametocyte" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="pmSexual" type="string">
+            <column name="pm_sexual" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="poAsexual" type="string">
+            <column name="po_asexual" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="poGametocyte" type="string">
+            <column name="po_gametocyte" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="poSexual" type="string">
+            <column name="po_sexual" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="pvAsexual" type="string">
+            <column name="pv_asexual" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="pvGametocyte" type="string">
+            <column name="pv_gametocyte" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="pvSexual" type="string">
+            <column name="pv_sexual" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="parasiteSeen" type="string">
+            <column name="parasite_seen" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="numTrophozoites" type="integer">
+            <column name="num_trophozoites" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="numWbcAsexual" type="integer">
+            <column name="num_wbc_asexual" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="numGametocytes" type="integer">
+            <column name="num_gametocytes" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="numWbcSexual" type="integer">
+            <column name="num_wbc_sexual" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="numInfectedRbc" type="integer">
+            <column name="num_infected_rbc" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="totalRbc" type="integer">
+            <column name="total_rbc" length="255" not-null="true" precision="19"/>
+        </property>
+        <property name="comments" type="string">
+            <column name="comments" length="255" not-null="false" precision="19"/>
+        </property>
+        <property name="labTechInitials" type="string">
+            <column name="lab_tech_initials" length="2" not-null="true" precision="19"/>
+        </property>
+        <many-to-one name="hamlet" class="com.mcm2.tracking.Hamlet" fetch="select">
+            <column name="hamlet" length="255" not-null="false" precision="19"/>
+        </many-to-one>
     </class>
     <class entity-name="com.mcm2.tracking.Patient" table="patient" name="com.mcm2.tracking.Patient" schema="public">
         <id name="patientId" type="integer">
