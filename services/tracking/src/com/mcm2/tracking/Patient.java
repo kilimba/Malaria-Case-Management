@@ -15,8 +15,6 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -50,8 +48,8 @@ private String middleName;
 private String lastName;
 private Date dateOfBirth;
 private String sex;
+private Integer hamlet;
 private String street;
-private Hamlet hamlet;
 private Set<PatientResults> patientResultses = new HashSet<PatientResults>(0);
 
     public Patient() {
@@ -140,6 +138,17 @@ private Set<PatientResults> patientResultses = new HashSet<PatientResults>(0);
 
     
 
+    @Column(name="hamlet")
+    public Integer getHamlet() {
+        return this.hamlet;
+    }
+    
+    public void setHamlet(Integer hamlet) {
+        this.hamlet = hamlet;
+    }
+
+    
+
     @Column(name="street")
     public String getStreet() {
         return this.street;
@@ -147,16 +156,6 @@ private Set<PatientResults> patientResultses = new HashSet<PatientResults>(0);
     
     public void setStreet(String street) {
         this.street = street;
-    }
-
-@ManyToOne(fetch=FetchType.EAGER)
-    @JoinColumn(name="hamlet")
-    public Hamlet getHamlet() {
-        return this.hamlet;
-    }
-    
-    public void setHamlet(Hamlet hamlet) {
-        this.hamlet = hamlet;
     }
 
 @OneToMany(fetch=FetchType.LAZY, cascade = {CascadeType.ALL}, mappedBy="patient")

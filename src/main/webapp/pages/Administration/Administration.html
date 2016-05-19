@@ -8,17 +8,17 @@
                 <wm-tabpane name="tabpane1">
                     <wm-tabheader name="tabheader1" heading="Locations"></wm-tabheader>
                     <wm-tabcontent name="tabcontent1">
-                        <wm-tabs name="tabs2">
-                            <wm-tabpane name="tabpane2">
-                                <wm-tabheader name="tabheader2" heading="District"></wm-tabheader>
-                                <wm-tabcontent name="tabcontent2">
-                                    <wm-livegrid name="DistrictLivegrid1" service="tracking@District" formlayout="dialog">
-                                        <wm-grid deleterow="true" updaterow="true" insertrow="true" gridfirstrowselect="true" readonlygrid="false" name="DistrictGrid1" dataset="bind:Variables.TrackingDistrictData.dataSet">
+                        <wm-tabs name="tabs3">
+                            <wm-tabpane name="tabpane8">
+                                <wm-tabheader name="tabheader8" heading="District"></wm-tabheader>
+                                <wm-tabcontent name="tabcontent8">
+                                    <wm-livegrid name="DistrictLivegrid7" service="tracking@District" formlayout="dialog">
+                                        <wm-grid deleterow="true" updaterow="true" insertrow="true" gridfirstrowselect="true" readonlygrid="false" name="DistrictGrid7" dataset="bind:Variables.TrackingDistrictData.dataSet">
                                             <wm-grid-column binding="id" caption="Id" type="integer" primary-key="true" generator="identity" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
                                             <wm-grid-column binding="district" caption="District" type="string" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
                                             <wm-grid-action key="addNewRow" label="New" show="true" class="btn-primary" icon="new" action="addNewRow()" type="button"></wm-grid-action>
                                         </wm-grid>
-                                        <wm-liveform novalidate="false" title="Details" name="DistrictLiveform1" dataset="bind:Variables.TrackingDistrictData.dataSet" formtype="dialog">
+                                        <wm-liveform novalidate="false" title="Details" name="DistrictLiveform7" dataset="bind:Variables.TrackingDistrictData.dataSet" formtype="dialog">
                                             <wm-layoutgrid name="layoutgrid1">
                                                 <wm-gridrow name="gridrow1">
                                                     <wm-gridcolumn name="gridcolumn1" columnwidth="12">
@@ -37,34 +37,34 @@
                                     </wm-livegrid>
                                 </wm-tabcontent>
                             </wm-tabpane>
-                            <wm-tabpane name="tabpane3">
-                                <wm-tabheader name="tabheader3" heading="Ward"></wm-tabheader>
-                                <wm-tabcontent name="tabcontent3">
-                                    <wm-livegrid name="WardLivegrid2" service="tracking@Ward" formlayout="dialog">
-                                        <wm-grid deleterow="true" updaterow="true" insertrow="true" gridfirstrowselect="true" readonlygrid="false" name="WardGrid2" dataset="bind:Variables.TrackingWardData.dataSet">
+                            <wm-tabpane name="tabpane5">
+                                <wm-tabheader name="tabheader5" heading="Ward"></wm-tabheader>
+                                <wm-tabcontent name="tabcontent5">
+                                    <wm-livegrid name="WardLivegrid5" service="tracking@Ward" formlayout="dialog">
+                                        <wm-grid deleterow="true" updaterow="true" insertrow="true" gridfirstrowselect="true" readonlygrid="false" name="WardGrid5" dataset="bind:Variables.TrackingWardData.dataSet">
                                             <wm-grid-column binding="wardId" caption="Ward Id" type="short" primary-key="true" generator="identity" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
                                             <wm-grid-column binding="wardName" caption="Ward Name" type="string" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
                                             <wm-grid-column binding="district.id" caption="District Id" type="integer" primary-key="true" generator="identity" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
                                             <wm-grid-column binding="district.district" caption="District District" type="string" readonly="false" disable-inline-editing="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
                                             <wm-grid-action key="addNewRow" label="New" show="true" class="btn-primary" icon="new" action="addNewRow()" type="button"></wm-grid-action>
                                         </wm-grid>
-                                        <wm-liveform novalidate="false" title="Details" name="WardLiveform2" dataset="bind:Variables.TrackingWardData.dataSet" formtype="dialog">
+                                        <wm-liveform novalidate="false" title="Details" name="WardLiveform5" dataset="bind:Variables.TrackingWardData.dataSet" formtype="dialog">
                                             <wm-layoutgrid name="layoutgrid2">
-                                                <wm-gridrow name="gridrow6">
-                                                    <wm-gridcolumn name="gridcolumn3" columnwidth="12">
+                                                <wm-gridrow name="gridrow7">
+                                                    <wm-gridcolumn name="gridcolumn4" columnwidth="12">
                                                         <wm-form-field display-name="Ward Id" show="false" primary-key="true" generator="identity" key="wardId" type="short" maxvalue="NaN" is-related="false" readonly="true" required="true" placeholder="Enter value"
                                                         minvalue="NaN" multiple="false" regexp=".*"></wm-form-field>
                                                     </wm-gridcolumn>
                                                 </wm-gridrow>
-                                                <wm-gridrow name="gridrow7">
-                                                    <wm-gridcolumn name="gridcolumn4" columnwidth="12">
-                                                        <wm-form-field display-name="Ward Name" show="true" primary-key="false" generator="null" key="wardName" type="string" maxvalue="255" is-related="false" readonly="false" required="true" placeholder="Enter value"
+                                                <wm-gridrow name="gridrow8">
+                                                    <wm-gridcolumn name="gridcolumn5" columnwidth="12">
+                                                        <wm-form-field display-name="Ward Name" show="true" primary-key="false" generator="null" key="wardName" type="string" maxvalue="255" is-related="false" readonly="false" required="false" placeholder="Enter value"
                                                         multiple="false" regexp=".*"></wm-form-field>
                                                     </wm-gridcolumn>
                                                 </wm-gridrow>
-                                                <wm-gridrow name="gridrow8">
-                                                    <wm-gridcolumn name="gridcolumn5" columnwidth="12">
-                                                        <wm-form-field display-name="District" show="true" primary-key="false" generator="assigned" key="district" type="list" is-related="true" readonly="false" required="true" placeholder="Select value" datafield="All Fields"
+                                                <wm-gridrow name="gridrow9">
+                                                    <wm-gridcolumn name="gridcolumn6" columnwidth="12">
+                                                        <wm-form-field display-name="District" show="true" primary-key="false" generator="assigned" key="district" type="list" is-related="true" readonly="false" required="false" placeholder="Select value" datafield="All Fields"
                                                         displayfield="id" displayvalue="district" multiple="false" regexp=".*"></wm-form-field>
                                                     </wm-gridcolumn>
                                                 </wm-gridrow>
@@ -75,78 +75,72 @@
                                     </wm-livegrid>
                                 </wm-tabcontent>
                             </wm-tabpane>
-                            <wm-tabpane name="tabpane4">
-                                <wm-tabheader name="tabheader4" heading="Village"></wm-tabheader>
-                                <wm-tabcontent name="tabcontent4">
-                                    <wm-livegrid name="VillageLivegrid3" service="tracking@Village" formlayout="dialog">
-                                        <wm-grid deleterow="true" updaterow="true" insertrow="true" gridfirstrowselect="true" readonlygrid="false" name="VillageGrid3" dataset="bind:Variables.TrackingVillageData.dataSet">
+                            <wm-tabpane name="tabpane6_1">
+                                <wm-tabheader name="tabheader6_1" heading="Village"></wm-tabheader>
+                                <wm-tabcontent name="tabcontent6_1">
+                                    <wm-livegrid name="VillageLivegrid5" service="tracking@Village" formlayout="dialog">
+                                        <wm-grid deleterow="true" updaterow="true" insertrow="true" gridfirstrowselect="true" readonlygrid="false" name="VillageGrid5" dataset="bind:Variables.TrackingVillageData.dataSet">
                                             <wm-grid-column binding="villageId" caption="Village Id" type="integer" primary-key="true" generator="identity" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
                                             <wm-grid-column binding="villageName" caption="Village Name" type="string" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
                                             <wm-grid-column binding="ward.wardId" caption="Ward Ward Id" type="short" primary-key="true" generator="identity" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
                                             <wm-grid-column binding="ward.wardName" caption="Ward Ward Name" type="string" readonly="false" disable-inline-editing="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                            <wm-grid-action key="addNewRow" label="New" show="true" class="btn-primary" icon="new" action="addNewRow()" type="button"></wm-grid-action>
+                                            <wm-grid-action key="addNewRow" label="New" value="new" icon="new" show="true" class="btn-primary" action="addNewRow()"></wm-grid-action>
                                         </wm-grid>
-                                        <wm-liveform novalidate="false" title="Details" name="VillageLiveform3" dataset="bind:Variables.TrackingVillageData.dataSet" formtype="dialog">
-                                            <wm-layoutgrid name="layoutgrid3">
-                                                <wm-gridrow name="gridrow12">
-                                                    <wm-gridcolumn name="gridcolumn6" columnwidth="12">
-                                                        <wm-form-field display-name="Village Id" show="false" primary-key="true" generator="identity" key="villageId" type="integer" maxvalue="NaN" is-related="false" readonly="true" required="true" placeholder="Enter value"
-                                                        minvalue="NaN" multiple="false" regexp=".*"></wm-form-field>
+                                        <wm-liveform novalidate="false" title="Details" name="VillageLiveform5" dataset="bind:Variables.TrackingVillageData.dataSet" formtype="dialog">
+                                            <wm-layoutgrid name="layoutgrid1">
+                                                <wm-gridrow name="gridrow1">
+                                                    <wm-gridcolumn name="gridcolumn1" columnwidth="12">
+                                                        <wm-form-field display-name="Village Id" show="false" primary-key="true" generator="identity" key="villageId" type="integer" is-related="false" readonly="true" required="true"></wm-form-field>
                                                     </wm-gridcolumn>
                                                 </wm-gridrow>
-                                                <wm-gridrow name="gridrow13">
-                                                    <wm-gridcolumn name="gridcolumn7" columnwidth="12">
-                                                        <wm-form-field display-name="Village Name" show="true" primary-key="false" generator="null" key="villageName" type="string" maxvalue="255" is-related="false" readonly="false" required="true" placeholder="Enter value"
-                                                        multiple="false" regexp=".*"></wm-form-field>
+                                                <wm-gridrow name="gridrow2">
+                                                    <wm-gridcolumn name="gridcolumn2" columnwidth="12">
+                                                        <wm-form-field display-name="Village Name" show="true" primary-key="false" generator="null" key="villageName" type="string" maxvalue="255" is-related="false" readonly="false" required="false"></wm-form-field>
                                                     </wm-gridcolumn>
                                                 </wm-gridrow>
-                                                <wm-gridrow name="gridrow14">
-                                                    <wm-gridcolumn name="gridcolumn8" columnwidth="12">
-                                                        <wm-form-field display-name="Ward" show="true" primary-key="false" generator="null" key="ward" type="list" is-related="true" readonly="false" required="true" related-field-name="district" placeholder="Select value"
-                                                        datafield="All Fields" displayfield="wardId" displayvalue="wardName" multiple="false" regexp=".*"></wm-form-field>
+                                                <wm-gridrow name="gridrow3">
+                                                    <wm-gridcolumn name="gridcolumn3" columnwidth="12">
+                                                        <wm-form-field display-name="Ward" show="true" primary-key="false" generator="null" key="ward" type="list" is-related="true" readonly="false" required="false" related-field-name="district"></wm-form-field>
                                                     </wm-gridcolumn>
                                                 </wm-gridrow>
                                             </wm-layoutgrid>
-                                            <wm-form-action key="cancel" display-name="Cancel" show="true" class="form-cancel btn-secondary" iconclass="glyphicon glyphicon-remove-circle" action="cancel()" type="button" update-mode="true"></wm-form-action>
-                                            <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="glyphicon glyphicon-save" type="Submit" update-mode="true"></wm-form-action>
+                                            <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="glyphicon glyphicon-remove-circle" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true"></wm-form-action>
+                                            <wm-form-action key="save" class="form-save btn-success" iconclass="glyphicon glyphicon-save" display-name="Save" show="true" type="Submit" update-mode="true"></wm-form-action>
                                         </wm-liveform>
                                     </wm-livegrid>
                                 </wm-tabcontent>
                             </wm-tabpane>
-                            <wm-tabpane name="tabpane5">
-                                <wm-tabheader name="tabheader5" heading="Hamlet"></wm-tabheader>
-                                <wm-tabcontent name="tabcontent5">
-                                    <wm-livegrid name="HamletLivegrid4" service="tracking@Hamlet" formlayout="dialog">
-                                        <wm-grid deleterow="true" updaterow="true" insertrow="true" gridfirstrowselect="true" readonlygrid="false" name="HamletGrid4" dataset="bind:Variables.TrackingHamletData.dataSet">
+                            <wm-tabpane name="tabpane7">
+                                <wm-tabheader name="tabheader7" heading="Hamlet"></wm-tabheader>
+                                <wm-tabcontent name="tabcontent7">
+                                    <wm-livegrid name="HamletLivegrid6" service="tracking@Hamlet" formlayout="dialog">
+                                        <wm-grid deleterow="true" updaterow="true" insertrow="true" gridfirstrowselect="true" readonlygrid="false" name="HamletGrid6" dataset="bind:Variables.TrackingHamletData.dataSet">
                                             <wm-grid-column binding="hamletId" caption="Hamlet Id" type="integer" primary-key="true" generator="identity" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
                                             <wm-grid-column binding="hamletName" caption="Hamlet Name" type="string" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
                                             <wm-grid-column binding="village.villageId" caption="Village Village Id" type="integer" primary-key="true" generator="identity" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
                                             <wm-grid-column binding="village.villageName" caption="Village Village Name" type="string" readonly="false" disable-inline-editing="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                            <wm-grid-action key="addNewRow" label="New" show="true" class="btn-primary" icon="new" action="addNewRow()" type="button"></wm-grid-action>
+                                            <wm-grid-action key="addNewRow" label="New" value="new" icon="new" show="true" class="btn-primary" action="addNewRow()"></wm-grid-action>
                                         </wm-grid>
-                                        <wm-liveform novalidate="false" title="Details" name="HamletLiveform4" dataset="bind:Variables.TrackingHamletData.dataSet" formtype="dialog">
-                                            <wm-layoutgrid name="layoutgrid4">
-                                                <wm-gridrow name="gridrow18">
-                                                    <wm-gridcolumn name="gridcolumn9" columnwidth="12">
-                                                        <wm-form-field display-name="Hamlet Id" show="false" primary-key="true" generator="identity" key="hamletId" type="integer" maxvalue="NaN" is-related="false" readonly="true" required="true" placeholder="Enter value"
-                                                        minvalue="NaN" multiple="false" regexp=".*"></wm-form-field>
+                                        <wm-liveform novalidate="false" title="Details" name="HamletLiveform6" dataset="bind:Variables.TrackingHamletData.dataSet" formtype="dialog">
+                                            <wm-layoutgrid name="layoutgrid2">
+                                                <wm-gridrow name="gridrow4">
+                                                    <wm-gridcolumn name="gridcolumn4" columnwidth="12">
+                                                        <wm-form-field display-name="Hamlet Id" show="false" primary-key="true" generator="identity" key="hamletId" type="integer" is-related="false" readonly="true" required="true"></wm-form-field>
                                                     </wm-gridcolumn>
                                                 </wm-gridrow>
-                                                <wm-gridrow name="gridrow19">
-                                                    <wm-gridcolumn name="gridcolumn10" columnwidth="12">
-                                                        <wm-form-field display-name="Hamlet Name" show="true" primary-key="false" generator="null" key="hamletName" type="string" maxvalue="255" is-related="false" readonly="false" required="true" placeholder="Enter value"
-                                                        multiple="false" regexp=".*"></wm-form-field>
+                                                <wm-gridrow name="gridrow5">
+                                                    <wm-gridcolumn name="gridcolumn5" columnwidth="12">
+                                                        <wm-form-field display-name="Hamlet Name" show="true" primary-key="false" generator="null" key="hamletName" type="string" maxvalue="255" is-related="false" readonly="false" required="false"></wm-form-field>
                                                     </wm-gridcolumn>
                                                 </wm-gridrow>
-                                                <wm-gridrow name="gridrow20">
-                                                    <wm-gridcolumn name="gridcolumn11" columnwidth="12">
-                                                        <wm-form-field display-name="Village" show="true" primary-key="false" generator="null" key="village" type="list" is-related="true" readonly="false" required="true" related-field-name="ward" placeholder="Select value"
-                                                        datafield="All Fields" displayfield="villageId" displayvalue="villageName" multiple="false" regexp=".*"></wm-form-field>
+                                                <wm-gridrow name="gridrow6">
+                                                    <wm-gridcolumn name="gridcolumn6" columnwidth="12">
+                                                        <wm-form-field display-name="Village" show="true" primary-key="false" generator="null" key="village" type="list" is-related="true" readonly="false" required="false" related-field-name="ward"></wm-form-field>
                                                     </wm-gridcolumn>
                                                 </wm-gridrow>
                                             </wm-layoutgrid>
-                                            <wm-form-action key="cancel" display-name="Cancel" show="true" class="form-cancel btn-secondary" iconclass="glyphicon glyphicon-remove-circle" action="cancel()" type="button" update-mode="true"></wm-form-action>
-                                            <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="glyphicon glyphicon-save" type="Submit" update-mode="true"></wm-form-action>
+                                            <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="glyphicon glyphicon-remove-circle" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true"></wm-form-action>
+                                            <wm-form-action key="save" class="form-save btn-success" iconclass="glyphicon glyphicon-save" display-name="Save" show="true" type="Submit" update-mode="true"></wm-form-action>
                                         </wm-liveform>
                                     </wm-livegrid>
                                 </wm-tabcontent>
@@ -216,7 +210,7 @@
                                 <wm-grid-column binding="firstName" caption="First Name" type="string" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
                                 <wm-grid-column binding="middleName" caption="Middle Name" type="string" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
                                 <wm-grid-column binding="surname" caption="Surname" type="string" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                <wm-grid-action key="addNewRow" label="New" value="new" icon="new" show="true" class="btn-primary" action="addNewRow()"></wm-grid-action>
+                                <wm-grid-action key="addNewRow" label="New" show="true" class="btn-primary" icon="new" action="addNewRow()" type="button"></wm-grid-action>
                             </wm-grid>
                             <wm-liveform novalidate="false" title="Details" name="HealthworkerLiveform8" dataset="bind:Variables.TrackingHealthworkerData.dataSet" formtype="dialog">
                                 <wm-layoutgrid name="layoutgrid1">

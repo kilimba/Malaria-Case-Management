@@ -407,7 +407,7 @@ wm.types = {
 					"exclude": [],
 					"type": "com.mcm2.tracking.BloodSlide",
 					"required": false,
-					"fieldOrder": 5,
+					"fieldOrder": 3,
 					"noChange": [],
 					"include": []
 				},
@@ -428,26 +428,6 @@ wm.types = {
 					"type": "java.lang.String",
 					"required": false,
 					"fieldOrder": 2,
-					"noChange": [],
-					"include": []
-				},
-				"healthFacilities": {
-					"isList": true,
-					"fieldSubType": null,
-					"exclude": [],
-					"type": "com.mcm2.tracking.HealthFacility",
-					"required": false,
-					"fieldOrder": 4,
-					"noChange": [],
-					"include": []
-				},
-				"patients": {
-					"isList": true,
-					"fieldSubType": null,
-					"exclude": [],
-					"type": "com.mcm2.tracking.Patient",
-					"required": false,
-					"fieldOrder": 3,
 					"noChange": [],
 					"include": []
 				},
@@ -474,7 +454,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.String",
 					"required": true,
-					"fieldOrder": 2,
+					"fieldOrder": 1,
 					"noChange": [],
 					"include": []
 				},
@@ -484,7 +464,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.String",
 					"required": true,
-					"fieldOrder": 3,
+					"fieldOrder": 2,
 					"noChange": [],
 					"include": []
 				},
@@ -494,7 +474,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.String",
 					"required": true,
-					"fieldOrder": 4,
+					"fieldOrder": 3,
 					"noChange": [],
 					"include": []
 				},
@@ -502,9 +482,9 @@ wm.types = {
 					"isList": false,
 					"fieldSubType": null,
 					"exclude": [],
-					"type": "com.mcm2.tracking.Hamlet",
+					"type": "java.lang.Integer",
 					"required": false,
-					"fieldOrder": 1,
+					"fieldOrder": 4,
 					"noChange": [],
 					"include": []
 				},
@@ -598,7 +578,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.util.Date",
 					"required": false,
-					"fieldOrder": 6,
+					"fieldOrder": 5,
 					"noChange": [],
 					"include": []
 				},
@@ -608,7 +588,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.String",
 					"required": true,
-					"fieldOrder": 3,
+					"fieldOrder": 2,
 					"noChange": [],
 					"include": []
 				},
@@ -616,9 +596,9 @@ wm.types = {
 					"isList": false,
 					"fieldSubType": null,
 					"exclude": [],
-					"type": "com.mcm2.tracking.Hamlet",
+					"type": "java.lang.Integer",
 					"required": false,
-					"fieldOrder": 1,
+					"fieldOrder": 7,
 					"noChange": [],
 					"include": []
 				},
@@ -628,7 +608,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.Integer",
 					"required": true,
-					"fieldOrder": 2,
+					"fieldOrder": 1,
 					"noChange": [],
 					"include": []
 				},
@@ -638,7 +618,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.String",
 					"required": true,
-					"fieldOrder": 5,
+					"fieldOrder": 4,
 					"noChange": [],
 					"include": []
 				},
@@ -648,7 +628,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.String",
 					"required": false,
-					"fieldOrder": 4,
+					"fieldOrder": 3,
 					"noChange": [],
 					"include": []
 				},
@@ -678,7 +658,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.String",
 					"required": false,
-					"fieldOrder": 7,
+					"fieldOrder": 6,
 					"noChange": [],
 					"include": []
 				},
@@ -877,7 +857,7 @@ wm.types = {
 					"isList": false,
 					"fieldSubType": null,
 					"exclude": [],
-					"type": "java.lang.Short",
+					"type": "java.lang.Integer",
 					"required": true,
 					"fieldOrder": 0,
 					"noChange": [],

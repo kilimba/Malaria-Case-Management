@@ -12,18 +12,6 @@
         <many-to-one name="village" class="com.mcm2.tracking.Village" fetch="select">
             <column name="village" length="255" not-null="false" precision="19"/>
         </many-to-one>
-        <set name="patients" table="hamlet" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="hamlet"/>
-            </key>
-            <one-to-many class="com.mcm2.tracking.Patient"/>
-        </set>
-        <set name="healthFacilities" table="hamlet" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="hamlet"/>
-            </key>
-            <one-to-many class="com.mcm2.tracking.HealthFacility"/>
-        </set>
         <set name="bloodSlides" table="hamlet" inverse="true" lazy="true" fetch="select">
             <key>
                 <column name="hamlet"/>
@@ -98,7 +86,7 @@
         </set>
         <set name="bloodSlides" table="village" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="village"/>
+                <column name="villagee"/>
             </key>
             <one-to-many class="com.mcm2.tracking.BloodSlide"/>
         </set>
@@ -220,7 +208,7 @@
             <column name="hamlet" length="255" not-null="false" precision="19"/>
         </many-to-one>
         <many-to-one name="village" class="com.mcm2.tracking.Village" fetch="select">
-            <column name="village" length="255" not-null="true" precision="19"/>
+            <column name="villagee" length="255" not-null="true" precision="19"/>
         </many-to-one>
     </class>
     <class entity-name="com.mcm2.tracking.Patient" table="patient" name="com.mcm2.tracking.Patient" schema="public">
@@ -246,12 +234,12 @@
         <property name="sex" type="string">
             <column name="sex" length="255" not-null="false" precision="19"/>
         </property>
+        <property name="hamlet" type="integer">
+            <column name="hamlet" length="255" not-null="false" precision="19"/>
+        </property>
         <property name="street" type="string">
             <column name="street" length="255" not-null="false" precision="19"/>
         </property>
-        <many-to-one name="hamlet" class="com.mcm2.tracking.Hamlet" fetch="select">
-            <column name="hamlet" length="255" not-null="false" precision="19"/>
-        </many-to-one>
         <set name="patientResultses" table="patient" inverse="true" lazy="true" fetch="select">
             <key>
                 <column name="patient"/>
@@ -273,9 +261,9 @@
         <property name="facilityType" type="string">
             <column name="facility_type" length="255" not-null="true" precision="19"/>
         </property>
-        <many-to-one name="hamlet" class="com.mcm2.tracking.Hamlet" fetch="select">
+        <property name="hamlet" type="integer">
             <column name="hamlet" length="255" not-null="false" precision="19"/>
-        </many-to-one>
+        </property>
         <set name="healthworkers" table="health_facility" inverse="true" lazy="true" fetch="select">
             <key>
                 <column name="health_facility"/>

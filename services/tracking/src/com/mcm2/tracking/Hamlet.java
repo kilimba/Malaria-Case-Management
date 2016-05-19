@@ -43,8 +43,6 @@ public class Hamlet  implements java.io.Serializable
 private Integer hamletId;
 private String hamletName;
 private Village village;
-private Set<Patient> patients = new HashSet<Patient>(0);
-private Set<HealthFacility> healthFacilities = new HashSet<HealthFacility>(0);
 private Set<BloodSlide> bloodSlides = new HashSet<BloodSlide>(0);
 
     public Hamlet() {
@@ -84,24 +82,6 @@ private Set<BloodSlide> bloodSlides = new HashSet<BloodSlide>(0);
     
     public void setVillage(Village village) {
         this.village = village;
-    }
-
-@OneToMany(fetch=FetchType.LAZY, cascade = {CascadeType.ALL}, mappedBy="hamlet")
-    public Set<Patient> getPatients() {
-        return this.patients;
-    }
-    
-    public void setPatients(Set<Patient> patients) {
-        this.patients = patients;
-    }
-
-@OneToMany(fetch=FetchType.LAZY, cascade = {CascadeType.ALL}, mappedBy="hamlet")
-    public Set<HealthFacility> getHealthFacilities() {
-        return this.healthFacilities;
-    }
-    
-    public void setHealthFacilities(Set<HealthFacility> healthFacilities) {
-        this.healthFacilities = healthFacilities;
     }
 
 @OneToMany(fetch=FetchType.LAZY, cascade = {CascadeType.ALL}, mappedBy="hamlet")

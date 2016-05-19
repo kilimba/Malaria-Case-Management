@@ -43,13 +43,22 @@
 		"dataBinding": [
 			{
 				"name": "dataBinding",
-				"type": "object",
-				"fields": []
+				"type": "district",
+				"fields": [
+					{
+						"name": "id",
+						"type": "number"
+					},
+					{
+						"name": "district",
+						"type": "string"
+					}
+				]
 			}
 		],
 		"saveInPhonegap": false,
 		"firstRow": 0,
-		"maxResults": 20,
+		"maxResults": 50,
 		"designMaxResults": 10,
 		"operation": "read",
 		"startUpdate": true,
@@ -104,7 +113,8 @@
 			"fullyQualifiedName": "com.mcm2.tracking.District",
 			"tableType": "TABLE"
 		},
-		"bindCount": 2
+		"bindCount": 2,
+		"filterFields": {}
 	},
 	"TrackingHamletData": {
 		"name": "TrackingHamletData",
@@ -117,13 +127,26 @@
 		"dataBinding": [
 			{
 				"name": "dataBinding",
-				"type": "object",
-				"fields": []
+				"type": "hamlet",
+				"fields": [
+					{
+						"name": "hamletId",
+						"type": "number"
+					},
+					{
+						"name": "hamletName",
+						"type": "string"
+					},
+					{
+						"name": "village",
+						"type": "number"
+					}
+				]
 			}
 		],
 		"saveInPhonegap": false,
 		"firstRow": 0,
-		"maxResults": 20,
+		"maxResults": 50,
 		"designMaxResults": 10,
 		"operation": "read",
 		"startUpdate": true,
@@ -252,7 +275,8 @@
 			"fullyQualifiedName": "com.mcm2.tracking.Hamlet",
 			"tableType": "TABLE"
 		},
-		"bindCount": 2
+		"bindCount": 2,
+		"filterFields": {}
 	},
 	"TrackingHealthFacilityData": {
 		"name": "TrackingHealthFacilityData",
@@ -386,7 +410,8 @@
 							"precision": 19,
 							"generator": "identity",
 							"isRelated": false,
-							"defaultValue": null
+							"defaultValue": null,
+							"isRelatedPk": "true"
 						},
 						{
 							"fieldName": "hamletName",
@@ -400,7 +425,8 @@
 							"precision": 19,
 							"generator": null,
 							"isRelated": false,
-							"defaultValue": null
+							"defaultValue": null,
+							"disableInlineEditing": "true"
 						},
 						{
 							"fieldName": "village",
@@ -414,11 +440,13 @@
 							"precision": 19,
 							"generator": null,
 							"isRelated": true,
-							"defaultValue": null
+							"defaultValue": null,
+							"disableInlineEditing": "true"
 						}
 					],
 					"relatedFieldName": "hamlet.hamletId",
-					"isList": false
+					"isList": false,
+					"disableInlineEditing": "true"
 				}
 			],
 			"primaryKeys": [
@@ -1105,13 +1133,26 @@
 		"dataBinding": [
 			{
 				"name": "dataBinding",
-				"type": "object",
-				"fields": []
+				"type": "village",
+				"fields": [
+					{
+						"name": "villageId",
+						"type": "number"
+					},
+					{
+						"name": "villageName",
+						"type": "string"
+					},
+					{
+						"name": "ward",
+						"type": "number"
+					}
+				]
 			}
 		],
 		"saveInPhonegap": false,
 		"firstRow": 0,
-		"maxResults": 20,
+		"maxResults": 50,
 		"designMaxResults": 10,
 		"operation": "read",
 		"startUpdate": true,
@@ -1189,7 +1230,7 @@
 						{
 							"fieldName": "wardId",
 							"type": "short",
-							"hibernateType": "short",
+							"hibernateType": "integer",
 							"fullyQualifiedType": "short",
 							"columnName": "ward_id",
 							"isPrimaryKey": true,
@@ -1240,7 +1281,8 @@
 			"fullyQualifiedName": "com.mcm2.tracking.Village",
 			"tableType": "TABLE"
 		},
-		"bindCount": 2
+		"bindCount": 2,
+		"filterFields": {}
 	},
 	"TrackingWardData": {
 		"name": "TrackingWardData",
@@ -1293,7 +1335,7 @@
 				{
 					"fieldName": "wardId",
 					"type": "short",
-					"hibernateType": "short",
+					"hibernateType": "integer",
 					"fullyQualifiedType": "short",
 					"columnName": "ward_id",
 					"isPrimaryKey": true,
@@ -1438,7 +1480,8 @@
 		"tableName": "blood_slide",
 		"tableType": "TABLE",
 		"properties": [
-			"hamlet"
+			"hamlet",
+			"village"
 		],
 		"relatedTables": [
 			{
@@ -1447,6 +1490,13 @@
 				"type": "Hamlet",
 				"package": "com.mcm2.tracking.BloodSlide",
 				"watchOn": "TrackingHamletData"
+			},
+			{
+				"columnName": "village",
+				"relationName": "village",
+				"type": "Village",
+				"package": "com.mcm2.tracking.BloodSlide",
+				"watchOn": "TrackingVillageData"
 			}
 		],
 		"propertiesMap": {
@@ -1523,17 +1573,69 @@
 				},
 				{
 					"fieldName": "village",
-					"type": "string",
+					"type": "integer",
 					"hibernateType": "integer",
-					"fullyQualifiedType": "string",
-					"columnName": "village",
+					"fullyQualifiedType": "integer",
+					"columnName": "villagee",
 					"isPrimaryKey": false,
 					"notNull": true,
 					"length": 255,
 					"precision": 19,
 					"generator": null,
-					"isRelated": false,
-					"defaultValue": null
+					"isRelated": true,
+					"defaultValue": null,
+					"relatedTableName": "village",
+					"relatedEntityName": "Village",
+					"columns": [
+						{
+							"fieldName": "villageId",
+							"type": "integer",
+							"hibernateType": "integer",
+							"fullyQualifiedType": "integer",
+							"columnName": "village_id",
+							"isPrimaryKey": true,
+							"notNull": true,
+							"length": 255,
+							"precision": 19,
+							"generator": "identity",
+							"isRelated": false,
+							"defaultValue": null,
+							"isRelatedPk": "true"
+						},
+						{
+							"fieldName": "villageName",
+							"type": "string",
+							"hibernateType": "string",
+							"fullyQualifiedType": "string",
+							"columnName": "village_name",
+							"isPrimaryKey": false,
+							"notNull": false,
+							"length": 255,
+							"precision": 19,
+							"generator": null,
+							"isRelated": false,
+							"defaultValue": null,
+							"disableInlineEditing": "true"
+						},
+						{
+							"fieldName": "ward",
+							"type": "integer",
+							"hibernateType": "integer",
+							"fullyQualifiedType": "integer",
+							"columnName": "ward",
+							"isPrimaryKey": false,
+							"notNull": false,
+							"length": 255,
+							"precision": 19,
+							"generator": null,
+							"isRelated": true,
+							"defaultValue": null,
+							"disableInlineEditing": "true"
+						}
+					],
+					"relatedFieldName": "village.villageId",
+					"isList": false,
+					"disableInlineEditing": "true"
 				},
 				{
 					"fieldName": "knowHamlet",
@@ -1990,15 +2092,16 @@
 		"bindCount": 2
 	},
 	"goToPage-DataEntry": {
+		"name": "goToPage-DataEntry",
 		"owner": "App",
 		"operation": "gotoPage",
 		"pageName": "DataEntry",
 		"dataBinding": {},
 		"category": "wm.NavigationVariable",
-		"_id": "wm-goToPage-DataEntry-wm.NavigationVariable-1463576592836",
-		"name": "goToPage-DataEntry"
+		"_id": "wm-goToPage-DataEntry-wm.NavigationVariable-1463576592836"
 	},
 	"yesNoVariable": {
+		"name": "yesNoVariable",
 		"type": "entry",
 		"isList": true,
 		"owner": "App",
@@ -2035,7 +2138,166 @@
 		],
 		"saveInPhonegap": false,
 		"category": "wm.Variable",
-		"_id": "wm-yesNoVariable-wm.Variable-1463577960702",
-		"name": "yesNoVariable"
+		"_id": "wm-yesNoVariable-wm.Variable-1463577960702"
+	},
+	"hamletLiveVariable": {
+		"name": "hamletLiveVariable",
+		"type": "Hamlet",
+		"isList": false,
+		"owner": "App",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "hamlet",
+				"fields": [
+					{
+						"name": "hamletId",
+						"type": "number"
+					},
+					{
+						"name": "hamletName",
+						"type": "string"
+					},
+					{
+						"name": "village",
+						"type": "number",
+						"value": "bind:Variables.TrackingVillageData.dataSet.data[$i].villageId"
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 50,
+		"designMaxResults": 10,
+		"operation": "read",
+		"startUpdate": false,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"liveSource": "tracking",
+		"ignoreCase": false,
+		"matchMode": "start",
+		"filterFields": {},
+		"category": "wm.LiveVariable",
+		"_id": "wm-hamletLiveVariable-wm.LiveVariable-1463644575282",
+		"package": "com.mcm2.tracking.Hamlet",
+		"tableName": "hamlet",
+		"tableType": "TABLE",
+		"properties": [
+			"village"
+		],
+		"relatedTables": [
+			{
+				"columnName": "village",
+				"relationName": "village",
+				"type": "Village",
+				"package": "com.mcm2.tracking.Hamlet",
+				"watchOn": "TrackingVillageData"
+			}
+		],
+		"propertiesMap": {
+			"columns": [
+				{
+					"fieldName": "hamletId",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "hamlet_id",
+					"isPrimaryKey": true,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": "identity",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "hamletName",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "hamlet_name",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "village",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "village",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": true,
+					"defaultValue": null,
+					"relatedTableName": "village",
+					"relatedEntityName": "Village",
+					"columns": [
+						{
+							"fieldName": "villageId",
+							"type": "integer",
+							"hibernateType": "integer",
+							"fullyQualifiedType": "integer",
+							"columnName": "village_id",
+							"isPrimaryKey": true,
+							"notNull": true,
+							"length": 255,
+							"precision": 19,
+							"generator": "identity",
+							"isRelated": false,
+							"defaultValue": null
+						},
+						{
+							"fieldName": "villageName",
+							"type": "string",
+							"hibernateType": "string",
+							"fullyQualifiedType": "string",
+							"columnName": "village_name",
+							"isPrimaryKey": false,
+							"notNull": false,
+							"length": 255,
+							"precision": 19,
+							"generator": null,
+							"isRelated": false,
+							"defaultValue": null
+						},
+						{
+							"fieldName": "ward",
+							"type": "integer",
+							"hibernateType": "integer",
+							"fullyQualifiedType": "integer",
+							"columnName": "ward",
+							"isPrimaryKey": false,
+							"notNull": false,
+							"length": 255,
+							"precision": 19,
+							"generator": null,
+							"isRelated": true,
+							"defaultValue": null
+						}
+					],
+					"relatedFieldName": "village.villageId",
+					"isList": false
+				}
+			],
+			"primaryKeys": [
+				"hamletId"
+			],
+			"entityName": "Hamlet",
+			"fullyQualifiedName": "com.mcm2.tracking.Hamlet",
+			"tableType": "TABLE"
+		}
 	}
 }

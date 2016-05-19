@@ -14,8 +14,6 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -44,7 +42,7 @@ private Integer id;
 private String facilityId;
 private String facilityName;
 private String facilityType;
-private Hamlet hamlet;
+private Integer hamlet;
 private Set<Healthworker> healthworkers = new HashSet<Healthworker>(0);
 
     public HealthFacility() {
@@ -98,13 +96,14 @@ private Set<Healthworker> healthworkers = new HashSet<Healthworker>(0);
         this.facilityType = facilityType;
     }
 
-@ManyToOne(fetch=FetchType.EAGER)
-    @JoinColumn(name="hamlet")
-    public Hamlet getHamlet() {
+    
+
+    @Column(name="hamlet")
+    public Integer getHamlet() {
         return this.hamlet;
     }
     
-    public void setHamlet(Hamlet hamlet) {
+    public void setHamlet(Integer hamlet) {
         this.hamlet = hamlet;
     }
 

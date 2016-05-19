@@ -445,7 +445,7 @@ private Village village;
     }
 
 @ManyToOne(fetch=FetchType.EAGER)
-    @JoinColumn(name="village", nullable=false)
+    @JoinColumn(name="villagee", nullable=false)
     public Village getVillage() {
         return this.village;
     }
