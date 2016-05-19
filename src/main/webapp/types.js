@@ -23,7 +23,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.String",
 					"required": false,
-					"fieldOrder": 31,
+					"fieldOrder": 32,
 					"noChange": [],
 					"include": []
 				},
@@ -33,7 +33,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.util.Date",
 					"required": true,
-					"fieldOrder": 7,
+					"fieldOrder": 8,
 					"noChange": [],
 					"include": []
 				},
@@ -43,7 +43,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.util.Date",
 					"required": true,
-					"fieldOrder": 10,
+					"fieldOrder": 11,
 					"noChange": [],
 					"include": []
 				},
@@ -53,7 +53,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.String",
 					"required": true,
-					"fieldOrder": 3,
+					"fieldOrder": 4,
 					"noChange": [],
 					"include": []
 				},
@@ -83,7 +83,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.String",
 					"required": true,
-					"fieldOrder": 9,
+					"fieldOrder": 10,
 					"noChange": [],
 					"include": []
 				},
@@ -93,7 +93,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.String",
 					"required": true,
-					"fieldOrder": 6,
+					"fieldOrder": 7,
 					"noChange": [],
 					"include": []
 				},
@@ -103,7 +103,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.String",
 					"required": true,
-					"fieldOrder": 32,
+					"fieldOrder": 33,
 					"noChange": [],
 					"include": []
 				},
@@ -113,7 +113,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.String",
 					"required": false,
-					"fieldOrder": 4,
+					"fieldOrder": 5,
 					"noChange": [],
 					"include": []
 				},
@@ -123,7 +123,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.Integer",
 					"required": true,
-					"fieldOrder": 27,
+					"fieldOrder": 28,
 					"noChange": [],
 					"include": []
 				},
@@ -133,7 +133,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.Integer",
 					"required": true,
-					"fieldOrder": 29,
+					"fieldOrder": 30,
 					"noChange": [],
 					"include": []
 				},
@@ -143,7 +143,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.Integer",
 					"required": true,
-					"fieldOrder": 25,
+					"fieldOrder": 26,
 					"noChange": [],
 					"include": []
 				},
@@ -153,7 +153,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.Integer",
 					"required": true,
-					"fieldOrder": 26,
+					"fieldOrder": 27,
 					"noChange": [],
 					"include": []
 				},
@@ -163,7 +163,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.Integer",
 					"required": true,
-					"fieldOrder": 28,
+					"fieldOrder": 29,
 					"noChange": [],
 					"include": []
 				},
@@ -173,7 +173,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.String",
 					"required": true,
-					"fieldOrder": 24,
+					"fieldOrder": 25,
 					"noChange": [],
 					"include": []
 				},
@@ -183,7 +183,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.String",
 					"required": true,
-					"fieldOrder": 2,
+					"fieldOrder": 3,
 					"noChange": [],
 					"include": []
 				},
@@ -193,7 +193,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.String",
 					"required": true,
-					"fieldOrder": 12,
+					"fieldOrder": 13,
 					"noChange": [],
 					"include": []
 				},
@@ -203,7 +203,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.String",
 					"required": true,
-					"fieldOrder": 13,
+					"fieldOrder": 14,
 					"noChange": [],
 					"include": []
 				},
@@ -213,7 +213,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.String",
 					"required": true,
-					"fieldOrder": 14,
+					"fieldOrder": 15,
 					"noChange": [],
 					"include": []
 				},
@@ -223,7 +223,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.String",
 					"required": true,
-					"fieldOrder": 15,
+					"fieldOrder": 16,
 					"noChange": [],
 					"include": []
 				},
@@ -233,7 +233,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.String",
 					"required": true,
-					"fieldOrder": 16,
+					"fieldOrder": 17,
 					"noChange": [],
 					"include": []
 				},
@@ -243,7 +243,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.String",
 					"required": true,
-					"fieldOrder": 17,
+					"fieldOrder": 18,
 					"noChange": [],
 					"include": []
 				},
@@ -253,7 +253,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.String",
 					"required": true,
-					"fieldOrder": 18,
+					"fieldOrder": 19,
 					"noChange": [],
 					"include": []
 				},
@@ -263,7 +263,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.String",
 					"required": true,
-					"fieldOrder": 19,
+					"fieldOrder": 20,
 					"noChange": [],
 					"include": []
 				},
@@ -273,7 +273,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.String",
 					"required": true,
-					"fieldOrder": 20,
+					"fieldOrder": 21,
 					"noChange": [],
 					"include": []
 				},
@@ -283,7 +283,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.String",
 					"required": true,
-					"fieldOrder": 21,
+					"fieldOrder": 22,
 					"noChange": [],
 					"include": []
 				},
@@ -293,7 +293,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.String",
 					"required": true,
-					"fieldOrder": 22,
+					"fieldOrder": 23,
 					"noChange": [],
 					"include": []
 				},
@@ -303,7 +303,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.String",
 					"required": true,
-					"fieldOrder": 23,
+					"fieldOrder": 24,
 					"noChange": [],
 					"include": []
 				},
@@ -313,7 +313,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.Integer",
 					"required": true,
-					"fieldOrder": 11,
+					"fieldOrder": 12,
 					"noChange": [],
 					"include": []
 				},
@@ -323,7 +323,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.String",
 					"required": true,
-					"fieldOrder": 5,
+					"fieldOrder": 6,
 					"noChange": [],
 					"include": []
 				},
@@ -333,7 +333,7 @@ wm.types = {
 					"exclude": [],
 					"type": "java.util.Date",
 					"required": true,
-					"fieldOrder": 8,
+					"fieldOrder": 9,
 					"noChange": [],
 					"include": []
 				},
@@ -343,7 +343,17 @@ wm.types = {
 					"exclude": [],
 					"type": "java.lang.Integer",
 					"required": true,
-					"fieldOrder": 30,
+					"fieldOrder": 31,
+					"noChange": [],
+					"include": []
+				},
+				"village": {
+					"isList": false,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "com.mcm2.tracking.Village",
+					"required": true,
+					"fieldOrder": 2,
 					"noChange": [],
 					"include": []
 				}
@@ -786,6 +796,16 @@ wm.types = {
 			"liveService": false,
 			"internal": false,
 			"fields": {
+				"bloodSlides": {
+					"isList": true,
+					"fieldSubType": null,
+					"exclude": [],
+					"type": "com.mcm2.tracking.BloodSlide",
+					"required": false,
+					"fieldOrder": 4,
+					"noChange": [],
+					"include": []
+				},
 				"hamlets": {
 					"isList": true,
 					"fieldSubType": null,

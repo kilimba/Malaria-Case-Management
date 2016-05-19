@@ -33,17 +33,3 @@ Application.$controller("BloodSlideLiveform1Controller", ["$scope",
 		$scope.ctrlScope = $scope;
 	}
 ]);
-
-Application.$controller("BloodSlideGrid2Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);
-
-Application.$controller("BloodSlideLiveform2Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);

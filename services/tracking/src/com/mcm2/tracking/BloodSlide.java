@@ -73,6 +73,7 @@ private Integer totalRbc;
 private String comments;
 private String labTechInitials;
 private Hamlet hamlet;
+private Village village;
 
     public BloodSlide() {
     }
@@ -441,6 +442,16 @@ private Hamlet hamlet;
     
     public void setHamlet(Hamlet hamlet) {
         this.hamlet = hamlet;
+    }
+
+@ManyToOne(fetch=FetchType.EAGER)
+    @JoinColumn(name="village", nullable=false)
+    public Village getVillage() {
+        return this.village;
+    }
+    
+    public void setVillage(Village village) {
+        this.village = village;
     }
 
 

@@ -44,6 +44,7 @@ private Integer villageId;
 private String villageName;
 private Ward ward;
 private Set<Hamlet> hamlets = new HashSet<Hamlet>(0);
+private Set<BloodSlide> bloodSlides = new HashSet<BloodSlide>(0);
 
     public Village() {
     }
@@ -91,6 +92,15 @@ private Set<Hamlet> hamlets = new HashSet<Hamlet>(0);
     
     public void setHamlets(Set<Hamlet> hamlets) {
         this.hamlets = hamlets;
+    }
+
+@OneToMany(fetch=FetchType.LAZY, cascade = {CascadeType.ALL}, mappedBy="village")
+    public Set<BloodSlide> getBloodSlides() {
+        return this.bloodSlides;
+    }
+    
+    public void setBloodSlides(Set<BloodSlide> bloodSlides) {
+        this.bloodSlides = bloodSlides;
     }
 
 

@@ -32,6 +32,7 @@
             <element name="ward" typeRef="com.mcm2.tracking.Ward" isList="false" allowNull="true"/>
             <element name="villageName" typeRef="java.lang.String" isList="false" allowNull="true"/>
             <element name="hamlets" typeRef="com.mcm2.tracking.Hamlet" isList="true" allowNull="true"/>
+            <element name="bloodSlides" typeRef="com.mcm2.tracking.BloodSlide" isList="true" allowNull="true"/>
         </dataobject>
         <dataobject javaType="com.mcm2.tracking.District">
             <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
@@ -41,6 +42,7 @@
         <dataobject javaType="com.mcm2.tracking.BloodSlide">
             <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
             <element name="hamlet" typeRef="com.mcm2.tracking.Hamlet" isList="false" allowNull="true"/>
+            <element name="village" typeRef="com.mcm2.tracking.Village" isList="false" allowNull="false"/>
             <element name="patientId" typeRef="java.lang.String" isList="false" allowNull="false"/>
             <element name="firstName" typeRef="java.lang.String" isList="false" allowNull="false"/>
             <element name="middleName" typeRef="java.lang.String" isList="false" allowNull="true"/>

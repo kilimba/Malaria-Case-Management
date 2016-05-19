@@ -96,6 +96,12 @@
             </key>
             <one-to-many class="com.mcm2.tracking.Hamlet"/>
         </set>
+        <set name="bloodSlides" table="village" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="village"/>
+            </key>
+            <one-to-many class="com.mcm2.tracking.BloodSlide"/>
+        </set>
     </class>
     <class entity-name="com.mcm2.tracking.District" table="district" name="com.mcm2.tracking.District" schema="public">
         <id name="id" type="integer">
@@ -212,6 +218,9 @@
         </property>
         <many-to-one name="hamlet" class="com.mcm2.tracking.Hamlet" fetch="select">
             <column name="hamlet" length="255" not-null="false" precision="19"/>
+        </many-to-one>
+        <many-to-one name="village" class="com.mcm2.tracking.Village" fetch="select">
+            <column name="village" length="255" not-null="true" precision="19"/>
         </many-to-one>
     </class>
     <class entity-name="com.mcm2.tracking.Patient" table="patient" name="com.mcm2.tracking.Patient" schema="public">

@@ -1,12 +1,12 @@
 {
 	"goToPage-Main": {
 		"name": "goToPage-Main",
-		"owner": "Page",
+		"owner": "App",
 		"operation": "gotoPage",
 		"pageName": "Main",
 		"dataBinding": {},
 		"category": "wm.NavigationVariable",
-		"_id": "wm-wm.NavigationVariable1389180517517"
+		"_id": "wm-goToPage-Main-wm.NavigationVariable1389180517517"
 	},
 	"supportedLocale": {
 		"name": "supportedLocale",
@@ -30,7 +30,7 @@
 		],
 		"saveInPhonegap": false,
 		"category": "wm.Variable",
-		"_id": "wm-wm.Variable1402640443182"
+		"_id": "wm-supportedLocale-wm.Variable1402640443182"
 	},
 	"TrackingDistrictData": {
 		"name": "TrackingDistrictData",
@@ -1395,20 +1395,13 @@
 		"_id": "wm-goToPage-Laboratory-wm.NavigationVariable-1463051691686"
 	},
 	"goToPage-Administration": {
+		"name": "goToPage-Administration",
 		"owner": "App",
 		"operation": "gotoPage",
 		"pageName": "Administration",
 		"dataBinding": {},
 		"category": "wm.NavigationVariable",
 		"_id": "wm-goToPage-Administration-wm.NavigationVariable-1463053925130"
-	},
-	"goToPage-DataEntry": {
-		"owner": "App",
-		"operation": "gotoPage",
-		"pageName": "DataEntry",
-		"dataBinding": {},
-		"category": "wm.NavigationVariable",
-		"_id": "wm-goToPage-DataEntry-wm.NavigationVariable-1463059394403"
 	},
 	"TrackingBloodSlideData": {
 		"name": "TrackingBloodSlideData",
@@ -1520,6 +1513,20 @@
 					"hibernateType": "string",
 					"fullyQualifiedType": "string",
 					"columnName": "surname",
+					"isPrimaryKey": false,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "village",
+					"type": "string",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "string",
+					"columnName": "village",
 					"isPrimaryKey": false,
 					"notNull": true,
 					"length": 255,
@@ -1981,5 +1988,54 @@
 			"tableType": "TABLE"
 		},
 		"bindCount": 2
+	},
+	"goToPage-DataEntry": {
+		"owner": "App",
+		"operation": "gotoPage",
+		"pageName": "DataEntry",
+		"dataBinding": {},
+		"category": "wm.NavigationVariable",
+		"_id": "wm-goToPage-DataEntry-wm.NavigationVariable-1463576592836",
+		"name": "goToPage-DataEntry"
+	},
+	"yesNoVariable": {
+		"type": "entry",
+		"isList": true,
+		"owner": "App",
+		"dataSet": [
+			{
+				"name": "Yes",
+				"dataValue": "0"
+			},
+			{
+				"name": "No",
+				"dataValue": "1"
+			},
+			{
+				"name": "Enter Value",
+				"dataValue": "9"
+			}
+		],
+		"dataBinding": [
+			{
+				"name": "dataSet",
+				"fields": [
+					{
+						"name": "name",
+						"type": "entry"
+					},
+					{
+						"name": "dataValue",
+						"type": "entry"
+					}
+				],
+				"type": "object",
+				"isList": true
+			}
+		],
+		"saveInPhonegap": false,
+		"category": "wm.Variable",
+		"_id": "wm-yesNoVariable-wm.Variable-1463577960702",
+		"name": "yesNoVariable"
 	}
 }
