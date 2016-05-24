@@ -24,12 +24,7 @@ Application.$controller("DataEntryPageController", ["$scope", function ($scope) 
 }]);
 
 
-Application.$controller("BloodSlideGrid1Controller", ["$scope",
-	function($scope) {
-		"use strict";
-		$scope.ctrlScope = $scope;
-	}
-]);
+
 
 Application.$controller("BloodSlideLiveform1Controller", ["$scope",
 	function($scope) {
@@ -37,9 +32,210 @@ Application.$controller("BloodSlideLiveform1Controller", ["$scope",
 		$scope.ctrlScope = $scope;
 	}
 ]);
+
+Application.$controller("BloodSlideGrid2Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("BloodSlideLiveform2Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("liveform3Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+
+
+
+
+Application.$controller("BloodSlideGrid4Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("BloodSlideLiveform5Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
 </script>
 <script id="DataEntry.variables.json">
-var _DataEntryPage_Variables_ ={}
+var _DataEntryPage_Variables_ ={
+	"hamletVar": {
+		"name": "hamletVar",
+		"type": "Hamlet",
+		"isList": false,
+		"owner": "Page",
+		"dataSet": {
+			"dataValue": ""
+		},
+		"dataBinding": [
+			{
+				"name": "dataBinding",
+				"type": "hamlet",
+				"fields": [
+					{
+						"name": "hamletId",
+						"type": "number",
+						"value": null
+					},
+					{
+						"name": "hamletName",
+						"type": "string"
+					},
+					{
+						"name": "village",
+						"type": "number",
+						"value": null
+					}
+				]
+			}
+		],
+		"saveInPhonegap": false,
+		"firstRow": 0,
+		"maxResults": 200,
+		"designMaxResults": 10,
+		"operation": "read",
+		"startUpdate": true,
+		"autoUpdate": true,
+		"inFlightBehavior": "executeLast",
+		"transformationRequired": false,
+		"liveSource": "tracking",
+		"ignoreCase": false,
+		"matchMode": "start",
+		"filterFields": {},
+		"category": "wm.LiveVariable",
+		"_id": "wm-hamletVar-wm.LiveVariable-1463813372766",
+		"package": "com.mcm2.tracking.Hamlet",
+		"tableName": "hamlet",
+		"tableType": "TABLE",
+		"properties": [
+			"village"
+		],
+		"relatedTables": [
+			{
+				"columnName": "village",
+				"relationName": "village",
+				"type": "Village",
+				"package": "com.mcm2.tracking.Hamlet",
+				"watchOn": "TrackingVillageData"
+			}
+		],
+		"propertiesMap": {
+			"columns": [
+				{
+					"fieldName": "hamletId",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "hamlet_id",
+					"isPrimaryKey": true,
+					"notNull": true,
+					"length": 255,
+					"precision": 19,
+					"generator": "identity",
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "hamletName",
+					"type": "string",
+					"hibernateType": "string",
+					"fullyQualifiedType": "string",
+					"columnName": "hamlet_name",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": false,
+					"defaultValue": null
+				},
+				{
+					"fieldName": "village",
+					"type": "integer",
+					"hibernateType": "integer",
+					"fullyQualifiedType": "integer",
+					"columnName": "village",
+					"isPrimaryKey": false,
+					"notNull": false,
+					"length": 255,
+					"precision": 19,
+					"generator": null,
+					"isRelated": true,
+					"defaultValue": null,
+					"relatedTableName": "village",
+					"relatedEntityName": "Village",
+					"columns": [
+						{
+							"fieldName": "villageId",
+							"type": "integer",
+							"hibernateType": "integer",
+							"fullyQualifiedType": "integer",
+							"columnName": "village_id",
+							"isPrimaryKey": true,
+							"notNull": true,
+							"length": 255,
+							"precision": 19,
+							"generator": "identity",
+							"isRelated": false,
+							"defaultValue": null
+						},
+						{
+							"fieldName": "villageName",
+							"type": "string",
+							"hibernateType": "string",
+							"fullyQualifiedType": "string",
+							"columnName": "village_name",
+							"isPrimaryKey": false,
+							"notNull": false,
+							"length": 255,
+							"precision": 19,
+							"generator": null,
+							"isRelated": false,
+							"defaultValue": null
+						},
+						{
+							"fieldName": "ward",
+							"type": "integer",
+							"hibernateType": "integer",
+							"fullyQualifiedType": "integer",
+							"columnName": "ward",
+							"isPrimaryKey": false,
+							"notNull": false,
+							"length": 255,
+							"precision": 19,
+							"generator": null,
+							"isRelated": true,
+							"defaultValue": null
+						}
+					],
+					"relatedFieldName": "village.villageId",
+					"isList": false
+				}
+			],
+			"primaryKeys": [
+				"hamletId"
+			],
+			"entityName": "Hamlet",
+			"fullyQualifiedName": "com.mcm2.tracking.Hamlet",
+			"tableType": "TABLE"
+		}
+	}
+}
 </script>
 <script id="DataEntry.html" type="text/ng-template">
 <wm-page data-ng-controller="DataEntryPageController" name="page1">
@@ -48,224 +244,227 @@ var _DataEntryPage_Variables_ ={}
     <wm-content name="content1">
         <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
         <wm-page-content columnwidth="10" name="page_content1">
-            <wm-tabs name="tabs1">
-                <wm-tabpane name="tabpane1">
-                    <wm-tabheader heading="Blood Slide" name="tabheader1"></wm-tabheader>
-                    <wm-tabcontent name="tabcontent1">
-                        <wm-livegrid formlayout="dialog" service="tracking@BloodSlide" name="BloodSlideLivegrid1">
-                            <wm-grid dataset="bind:Variables.TrackingBloodSlideData.dataSet" name="BloodSlideGrid1" deleterow="true" updaterow="true" insertrow="true" gridfirstrowselect="true" readonlygrid="false">
-                                <wm-grid-column binding="id" caption="Id" type="integer" primary-key="true" generator="identity" readonly="true" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                <wm-grid-column binding="patientId" caption="Patient Id" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                <wm-grid-column binding="firstName" caption="First Name" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                <wm-grid-column binding="middleName" caption="Middle Name" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                <wm-grid-column binding="surname" caption="Surname" type="string" readonly="false" col-class="" col-ng-class="" search-placeholder="Search" is-related-pk="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                <wm-grid-column binding="village.villageName" caption="Village Name" type="string" disable-inline-editing="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
-                                <wm-grid-column binding="hamlet.hamletName" caption="Hamlet Name" type="string" disable-inline-editing="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+            <wm-tabs name="tabs4">
+                <wm-tabpane name="tabpane5">
+                    <wm-tabheader name="tabheader5"></wm-tabheader>
+                    <wm-tabcontent name="tabcontent5">
+                        <wm-livegrid name="BloodSlideLivegrid4" service="tracking@BloodSlide">
+                            <wm-grid deleterow="true" updaterow="true" insertrow="true" gridfirstrowselect="true" readonlygrid="false" name="BloodSlideGrid4" dataset="bind:Variables.TrackingBloodSlideData.dataSet">
+                                <wm-grid-column binding="id" caption="Id" type="integer" primary-key="true" generator="identity" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="patientId" caption="Patient Id" type="string" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="firstName" caption="First Name" type="string" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="middleName" caption="Middle Name" type="string" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="surname" caption="Surname" type="string" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="knowHamlet" caption="Know Hamlet" type="boolean" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="dateCollected" caption="Date Collected" type="date" readonly="false" datepattern="yyyy-MM-dd" formatpattern="toDate" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="timeCollected" caption="Time Collected" type="time" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="interviewerInitials" caption="Interviewer Initials" type="string" readonly="false" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                                <wm-grid-column binding="dateRead" caption="Date Read" type="date" readonly="false" datepattern="yyyy-MM-dd" formatpattern="toDate" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
                                 <wm-grid-action key="addNewRow" label="New" show="true" class="btn-primary" icon="new" action="addNewRow()" type="button"></wm-grid-action>
                             </wm-grid>
-                            <wm-liveform formtype="dialog" dataset="bind:Variables.TrackingBloodSlideData.dataSet" name="BloodSlideLiveform1" novalidate="false" title="Details">
-                                <wm-layoutgrid name="layoutgrid1">
-                                    <wm-gridrow name="gridrow69">
-                                        <wm-gridcolumn name="gridcolumn1" columnwidth="12">
+                            <wm-liveform novalidate="false" title="Details" name="BloodSlideLiveform5" dataset="bind:Variables.TrackingBloodSlideData.dataSet" formtype="inline">
+                                <wm-layoutgrid name="layoutgrid4">
+                                    <wm-gridrow name="gridrow1">
+                                        <wm-gridcolumn name="gridcolumn104" columnwidth="12">
                                             <wm-form-field display-name="Id" show="false" primary-key="true" generator="identity" key="id" type="integer" maxvalue="NaN" is-related="false" readonly="true" required="true" placeholder="Enter value" minvalue="NaN"
                                             multiple="false" regexp=".*"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
-                                    <wm-gridrow name="gridrow70">
-                                        <wm-gridcolumn name="gridcolumn2" columnwidth="12">
+                                    <wm-gridrow name="gridrow2">
+                                        <wm-gridcolumn name="gridcolumn105" columnwidth="12">
                                             <wm-form-field display-name="Patient Id" show="true" primary-key="false" generator="null" key="patientId" type="string" maxvalue="255" is-related="false" readonly="false" required="true" placeholder="Enter value"
-                                            multiple="false" regexp="^[A-Z]{2,3}[0-9]*$"></wm-form-field>
+                                            multiple="false" regexp=".*"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
-                                    <wm-gridrow name="gridrow71">
-                                        <wm-gridcolumn name="gridcolumn3" columnwidth="12">
+                                    <wm-gridrow name="gridrow3">
+                                        <wm-gridcolumn name="gridcolumn106" columnwidth="12">
                                             <wm-form-field display-name="First Name" show="true" primary-key="false" generator="null" key="firstName" type="string" maxvalue="255" is-related="false" readonly="false" required="true" placeholder="Enter value"
                                             multiple="false" regexp=".*"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
-                                    <wm-gridrow name="gridrow72">
-                                        <wm-gridcolumn name="gridcolumn4" columnwidth="12">
+                                    <wm-gridrow name="gridrow4">
+                                        <wm-gridcolumn name="gridcolumn107" columnwidth="12">
                                             <wm-form-field display-name="Middle Name" show="true" primary-key="false" generator="null" key="middleName" type="string" maxvalue="255" is-related="false" readonly="false" required="false" placeholder="Enter value"
                                             multiple="false" regexp=".*"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
-                                    <wm-gridrow name="gridrow73">
-                                        <wm-gridcolumn name="gridcolumn5" columnwidth="12">
+                                    <wm-gridrow name="gridrow5">
+                                        <wm-gridcolumn name="gridcolumn108" columnwidth="12">
                                             <wm-form-field display-name="Surname" show="true" primary-key="false" generator="null" key="surname" type="string" maxvalue="255" is-related="false" readonly="false" required="true" placeholder="Enter value" multiple="false"
                                             regexp=".*"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
-                                    <wm-gridrow name="gridrow74">
-                                        <wm-gridcolumn name="gridcolumn6" columnwidth="12">
-                                            <wm-form-field display-name="Village" show="true" primary-key="false" generator="null" key="village" type="list" maxvalue="255" is-related="true" readonly="false" required="true" placeholder="Enter value" datafield="All Fields"
-                                            displayfield="villageId" displayvalue="villageName" multiple="false" regexp=".*" default-value="19"></wm-form-field>
+                                    <wm-gridrow name="gridrow6">
+                                        <wm-gridcolumn name="gridcolumn109" columnwidth="12">
+                                            <wm-form-field display-name="Village" show="true" primary-key="false" generator="null" key="village" type="list" is-related="true" readonly="false" required="true" placeholder="Select value" datafield="All Fields"
+                                            displayfield="villageId" multiple="false" regexp=".*"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
-                                    <wm-gridrow name="gridrow75">
-                                        <wm-gridcolumn name="gridcolumn7" columnwidth="12">
+                                    <wm-gridrow name="gridrow7">
+                                        <wm-gridcolumn name="gridcolumn110" columnwidth="12">
                                             <wm-form-field display-name="Know Hamlet" show="true" primary-key="false" generator="null" key="knowHamlet" type="boolean" is-related="false" readonly="false" required="true" multiple="false" regexp=".*"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
-                                    <wm-gridrow name="gridrow76">
-                                        <wm-gridcolumn name="gridcolumn8" columnwidth="12">
-                                            <wm-form-field display-name="Hamlet" show="true" primary-key="false" generator="null" key="hamlet" type="list" is-related="true" readonly="false" required="false" placeholder="Select value" datafield="All Fields"
-                                            displayfield="hamletId" displayvalue="hamletName" multiple="false" regexp=".*"></wm-form-field>
+                                    <wm-gridrow name="gridrow8">
+                                        <wm-gridcolumn name="gridcolumn111" columnwidth="12">
+                                            <wm-form-field display-name="Hamlet" show="true" primary-key="false" generator="null" key="hamlet" type="list" is-related="true" readonly="false" required="false" placeholder="Select value" dataset="bind:Variables.hamletVar.dataSet"
+                                            datafield="hamletId" displayfield="hamletName" multiple="false" regexp=".*"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
-                                    <wm-gridrow name="gridrow77">
-                                        <wm-gridcolumn name="gridcolumn9" columnwidth="12">
+                                    <wm-gridrow name="gridrow9">
+                                        <wm-gridcolumn name="gridcolumn112" columnwidth="12">
                                             <wm-form-field display-name="Date Collected" show="true" primary-key="false" generator="null" key="dateCollected" type="date" is-related="false" readonly="false" required="true" placeholder="Select date" outputformat="yyyy-MM-dd"
                                             multiple="false" regexp=".*"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
-                                    <wm-gridrow name="gridrow78">
-                                        <wm-gridcolumn name="gridcolumn10" columnwidth="12">
+                                    <wm-gridrow name="gridrow10">
+                                        <wm-gridcolumn name="gridcolumn113" columnwidth="12">
                                             <wm-form-field display-name="Time Collected" show="true" primary-key="false" generator="null" key="timeCollected" type="time" is-related="false" readonly="false" required="true" placeholder="Select time" outputformat="HH:mm:ss"
                                             multiple="false" regexp=".*"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
-                                    <wm-gridrow name="gridrow79">
-                                        <wm-gridcolumn name="gridcolumn11" columnwidth="12">
+                                    <wm-gridrow name="gridrow11">
+                                        <wm-gridcolumn name="gridcolumn114" columnwidth="12">
                                             <wm-form-field display-name="Interviewer Initials" show="true" primary-key="false" generator="null" key="interviewerInitials" type="string" maxvalue="2" is-related="false" readonly="false" required="true" placeholder="Enter value"
-                                            multiple="false" regexp="^[A-Z]{2}$"></wm-form-field>
+                                            multiple="false" regexp=".*"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
-                                    <wm-gridrow name="gridrow80">
-                                        <wm-gridcolumn name="gridcolumn12" columnwidth="12">
+                                    <wm-gridrow name="gridrow12">
+                                        <wm-gridcolumn name="gridcolumn115" columnwidth="12">
                                             <wm-form-field display-name="Date Read" show="true" primary-key="false" generator="null" key="dateRead" type="date" is-related="false" readonly="false" required="true" placeholder="Select date" outputformat="yyyy-MM-dd"
                                             multiple="false" regexp=".*"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
-                                    <wm-gridrow name="gridrow81">
-                                        <wm-gridcolumn name="gridcolumn13" columnwidth="12">
-                                            <wm-form-field display-name="Reader" show="true" primary-key="false" generator="null" key="reader" type="integer" maxvalue="3" is-related="false" readonly="false" required="true" placeholder="Enter value" minvalue="1"
+                                    <wm-gridrow name="gridrow13">
+                                        <wm-gridcolumn name="gridcolumn116" columnwidth="12">
+                                            <wm-form-field display-name="Reader" show="true" primary-key="false" generator="null" key="reader" type="integer" maxvalue="NaN" is-related="false" readonly="false" required="true" placeholder="Enter value" minvalue="NaN"
                                             multiple="false" regexp=".*"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
-                                    <wm-gridrow name="gridrow82">
-                                        <wm-gridcolumn name="gridcolumn14" columnwidth="12">
-                                            <wm-form-field display-name="P.falciparum Asexual" show="true" primary-key="false" generator="null" key="pfAsexual" type="string" maxvalue="255" is-related="false" readonly="false" required="true" widget-type="Select"
-                                            placeholder="Enter value" dataset="bind:Variables.yesNoVariable.dataSet" datafield="dataValue" displayfield="name" multiple="false" regexp=".*" default-value="9"></wm-form-field>
+                                    <wm-gridrow name="gridrow14">
+                                        <wm-gridcolumn name="gridcolumn117" columnwidth="12">
+                                            <wm-form-field display-name="Pf Asexual" show="true" primary-key="false" generator="null" key="pfAsexual" type="string" maxvalue="255" is-related="false" readonly="false" required="true" placeholder="Enter value"
+                                            multiple="false" regexp=".*"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
-                                    <wm-gridrow name="gridrow83">
-                                        <wm-gridcolumn name="gridcolumn15" columnwidth="12">
-                                            <wm-form-field display-name="P.falciparum Gametocyte" show="true" primary-key="false" generator="null" key="pfGametocyte" type="string" maxvalue="255" is-related="false" readonly="false" required="true" widget-type="Select"
-                                            placeholder="Enter value" dataset="bind:Variables.yesNoVariable.dataSet" datafield="dataValue" displayfield="name" multiple="false" regexp=".*" default-value="9"></wm-form-field>
+                                    <wm-gridrow name="gridrow15">
+                                        <wm-gridcolumn name="gridcolumn118" columnwidth="12">
+                                            <wm-form-field display-name="Pf Gametocyte" show="true" primary-key="false" generator="null" key="pfGametocyte" type="string" maxvalue="255" is-related="false" readonly="false" required="true" placeholder="Enter value"
+                                            multiple="false" regexp=".*"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
-                                    <wm-gridrow name="gridrow84">
-                                        <wm-gridcolumn name="gridcolumn16" columnwidth="12">
-                                            <wm-form-field display-name="P.falciparum Sexual" show="true" primary-key="false" generator="null" key="pfSexual" type="string" maxvalue="255" is-related="false" readonly="false" required="true" widget-type="Select"
-                                            placeholder="Enter value" dataset="bind:Variables.yesNoVariable.dataSet" datafield="dataValue" displayfield="name" multiple="false" regexp=".*" default-value="9"></wm-form-field>
+                                    <wm-gridrow name="gridrow16">
+                                        <wm-gridcolumn name="gridcolumn119" columnwidth="12">
+                                            <wm-form-field display-name="Pf Sexual" show="true" primary-key="false" generator="null" key="pfSexual" type="string" maxvalue="255" is-related="false" readonly="false" required="true" placeholder="Enter value"
+                                            multiple="false" regexp=".*"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
-                                    <wm-gridrow name="gridrow85">
-                                        <wm-gridcolumn name="gridcolumn17" columnwidth="12">
-                                            <wm-form-field display-name="P.malariae Asexual" show="true" primary-key="false" generator="null" key="pmAsexual" type="string" maxvalue="255" is-related="false" readonly="false" required="true" widget-type="Select"
-                                            placeholder="Enter value" dataset="bind:Variables.yesNoVariable.dataSet" datafield="dataValue" displayfield="name" multiple="false" regexp=".*" default-value="9"></wm-form-field>
+                                    <wm-gridrow name="gridrow17">
+                                        <wm-gridcolumn name="gridcolumn120" columnwidth="12">
+                                            <wm-form-field display-name="Pm Asexual" show="true" primary-key="false" generator="null" key="pmAsexual" type="string" maxvalue="255" is-related="false" readonly="false" required="true" placeholder="Enter value"
+                                            multiple="false" regexp=".*"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
-                                    <wm-gridrow name="gridrow86">
-                                        <wm-gridcolumn name="gridcolumn18" columnwidth="12">
-                                            <wm-form-field display-name="P.malariae Gametocyte" show="true" primary-key="false" generator="null" key="pmGametocyte" type="string" maxvalue="255" is-related="false" readonly="false" required="true" widget-type="Select"
-                                            placeholder="Enter value" dataset="bind:Variables.yesNoVariable.dataSet" datafield="dataValue" displayfield="name" multiple="false" regexp=".*" default-value="9"></wm-form-field>
+                                    <wm-gridrow name="gridrow18">
+                                        <wm-gridcolumn name="gridcolumn121" columnwidth="12">
+                                            <wm-form-field display-name="Pm Gametocyte" show="true" primary-key="false" generator="null" key="pmGametocyte" type="string" maxvalue="255" is-related="false" readonly="false" required="true" placeholder="Enter value"
+                                            multiple="false" regexp=".*"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
-                                    <wm-gridrow name="gridrow87">
-                                        <wm-gridcolumn name="gridcolumn19" columnwidth="12">
-                                            <wm-form-field display-name="P.malariae Sexual" show="true" primary-key="false" generator="null" key="pmSexual" type="string" maxvalue="255" is-related="false" readonly="false" required="true" widget-type="Select"
-                                            placeholder="Enter value" dataset="bind:Variables.yesNoVariable.dataSet" datafield="dataValue" displayfield="name" multiple="false" regexp=".*" default-value="9"></wm-form-field>
+                                    <wm-gridrow name="gridrow19">
+                                        <wm-gridcolumn name="gridcolumn122" columnwidth="12">
+                                            <wm-form-field display-name="Pm Sexual" show="true" primary-key="false" generator="null" key="pmSexual" type="string" maxvalue="255" is-related="false" readonly="false" required="true" placeholder="Enter value"
+                                            multiple="false" regexp=".*"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
-                                    <wm-gridrow name="gridrow88">
-                                        <wm-gridcolumn name="gridcolumn20" columnwidth="12">
-                                            <wm-form-field display-name="P.ovale Asexual" show="true" primary-key="false" generator="null" key="poAsexual" type="string" maxvalue="255" is-related="false" readonly="false" required="true" widget-type="Select"
-                                            placeholder="Enter value" dataset="bind:Variables.yesNoVariable.dataSet" datafield="dataValue" displayfield="name" multiple="false" regexp=".*" default-value="9"></wm-form-field>
+                                    <wm-gridrow name="gridrow20">
+                                        <wm-gridcolumn name="gridcolumn123" columnwidth="12">
+                                            <wm-form-field display-name="Po Asexual" show="true" primary-key="false" generator="null" key="poAsexual" type="string" maxvalue="255" is-related="false" readonly="false" required="true" placeholder="Enter value"
+                                            multiple="false" regexp=".*"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
-                                    <wm-gridrow name="gridrow89">
-                                        <wm-gridcolumn name="gridcolumn21" columnwidth="12">
-                                            <wm-form-field display-name="P.ovale Gametocyte" show="true" primary-key="false" generator="null" key="poGametocyte" type="string" maxvalue="255" is-related="false" readonly="false" required="true" widget-type="Select"
-                                            placeholder="Enter value" dataset="bind:Variables.yesNoVariable.dataSet" datafield="dataValue" displayfield="name" multiple="false" regexp=".*" default-value="9"></wm-form-field>
+                                    <wm-gridrow name="gridrow21">
+                                        <wm-gridcolumn name="gridcolumn124" columnwidth="12">
+                                            <wm-form-field display-name="Po Gametocyte" show="true" primary-key="false" generator="null" key="poGametocyte" type="string" maxvalue="255" is-related="false" readonly="false" required="true" placeholder="Enter value"
+                                            multiple="false" regexp=".*"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
-                                    <wm-gridrow name="gridrow90">
-                                        <wm-gridcolumn name="gridcolumn22" columnwidth="12">
-                                            <wm-form-field display-name="P.ovale Sexual" show="true" primary-key="false" generator="null" key="poSexual" type="string" maxvalue="255" is-related="false" readonly="false" required="true" widget-type="Select"
-                                            placeholder="Enter value" dataset="bind:Variables.yesNoVariable.dataSet" datafield="dataValue" displayfield="name" multiple="false" regexp=".*" default-value="9"></wm-form-field>
+                                    <wm-gridrow name="gridrow22">
+                                        <wm-gridcolumn name="gridcolumn125" columnwidth="12">
+                                            <wm-form-field display-name="Po Sexual" show="true" primary-key="false" generator="null" key="poSexual" type="string" maxvalue="255" is-related="false" readonly="false" required="true" placeholder="Enter value"
+                                            multiple="false" regexp=".*"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
-                                    <wm-gridrow name="gridrow91">
-                                        <wm-gridcolumn name="gridcolumn23" columnwidth="12">
-                                            <wm-form-field display-name="P.vivax Asexual" show="true" primary-key="false" generator="null" key="pvAsexual" type="string" maxvalue="255" is-related="false" readonly="false" required="true" widget-type="Select"
-                                            placeholder="Enter value" dataset="bind:Variables.yesNoVariable.dataSet" datafield="dataValue" displayfield="name" multiple="false" regexp=".*" default-value="9"></wm-form-field>
+                                    <wm-gridrow name="gridrow23">
+                                        <wm-gridcolumn name="gridcolumn126" columnwidth="12">
+                                            <wm-form-field display-name="Pv Asexual" show="true" primary-key="false" generator="null" key="pvAsexual" type="string" maxvalue="255" is-related="false" readonly="false" required="true" placeholder="Enter value"
+                                            multiple="false" regexp=".*"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
-                                    <wm-gridrow name="gridrow92">
-                                        <wm-gridcolumn name="gridcolumn24" columnwidth="12">
-                                            <wm-form-field display-name="P.vivax Gametocyte" show="true" primary-key="false" generator="null" key="pvGametocyte" type="string" maxvalue="255" is-related="false" readonly="false" required="true" widget-type="Select"
-                                            placeholder="Enter value" dataset="bind:Variables.yesNoVariable.dataSet" datafield="dataValue" displayfield="name" multiple="false" regexp=".*" default-value="9"></wm-form-field>
+                                    <wm-gridrow name="gridrow24">
+                                        <wm-gridcolumn name="gridcolumn127" columnwidth="12">
+                                            <wm-form-field display-name="Pv Gametocyte" show="true" primary-key="false" generator="null" key="pvGametocyte" type="string" maxvalue="255" is-related="false" readonly="false" required="true" placeholder="Enter value"
+                                            multiple="false" regexp=".*"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
-                                    <wm-gridrow name="gridrow93">
-                                        <wm-gridcolumn name="gridcolumn25" columnwidth="12">
-                                            <wm-form-field display-name="P.vivax Sexual" show="true" primary-key="false" generator="null" key="pvSexual" type="string" maxvalue="255" is-related="false" readonly="false" required="true" widget-type="Select"
-                                            placeholder="Enter value" dataset="bind:Variables.yesNoVariable.dataSet" datafield="dataValue" displayfield="name" multiple="false" regexp=".*" default-value="9"></wm-form-field>
+                                    <wm-gridrow name="gridrow25">
+                                        <wm-gridcolumn name="gridcolumn128" columnwidth="12">
+                                            <wm-form-field display-name="Pv Sexual" show="true" primary-key="false" generator="null" key="pvSexual" type="string" maxvalue="255" is-related="false" readonly="false" required="true" placeholder="Enter value"
+                                            multiple="false" regexp=".*"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
-                                    <wm-gridrow name="gridrow94">
-                                        <wm-gridcolumn name="gridcolumn26" columnwidth="12">
-                                            <wm-form-field display-name="Parasite Seen" show="true" primary-key="false" generator="null" key="parasiteSeen" type="string" maxvalue="255" is-related="false" readonly="false" required="true" widget-type="Select"
-                                            placeholder="Enter value" dataset="bind:Variables.yesNoVariable.dataSet" datafield="dataValue" displayfield="name" multiple="false" regexp=".*" default-value="9"></wm-form-field>
+                                    <wm-gridrow name="gridrow26">
+                                        <wm-gridcolumn name="gridcolumn129" columnwidth="12">
+                                            <wm-form-field display-name="Parasite Seen" show="true" primary-key="false" generator="null" key="parasiteSeen" type="string" maxvalue="255" is-related="false" readonly="false" required="true" placeholder="Enter value"
+                                            multiple="false" regexp=".*"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
-                                    <wm-gridrow name="gridrow95">
-                                        <wm-gridcolumn name="gridcolumn27" columnwidth="12">
-                                            <wm-form-field display-name="Number of Trophozoites counted" show="true" primary-key="false" generator="null" key="numTrophozoites" type="integer" maxvalue="NaN" is-related="false" readonly="false" required="true"
-                                            placeholder="Enter value" minvalue="NaN" multiple="false" regexp=".*"></wm-form-field>
-                                        </wm-gridcolumn>
-                                    </wm-gridrow>
-                                    <wm-gridrow name="gridrow96">
-                                        <wm-gridcolumn name="gridcolumn28" columnwidth="12">
-                                            <wm-form-field display-name="Number WBC's counted in Asexual forms" show="true" primary-key="false" generator="null" key="numWbcAsexual" type="integer" maxvalue="NaN" is-related="false" readonly="false" required="true"
-                                            placeholder="Enter value" minvalue="NaN" multiple="false" regexp=".*"></wm-form-field>
-                                        </wm-gridcolumn>
-                                    </wm-gridrow>
-                                    <wm-gridrow name="gridrow97">
-                                        <wm-gridcolumn name="gridcolumn29" columnwidth="12">
-                                            <wm-form-field display-name="Number of Gametocytes counted" show="true" primary-key="false" generator="null" key="numGametocytes" type="integer" maxvalue="NaN" is-related="false" readonly="false" required="true"
-                                            placeholder="Enter value" minvalue="NaN" multiple="false" regexp=".*"></wm-form-field>
-                                        </wm-gridcolumn>
-                                    </wm-gridrow>
-                                    <wm-gridrow name="gridrow98">
-                                        <wm-gridcolumn name="gridcolumn30" columnwidth="12">
-                                            <wm-form-field display-name="Number of WBC's counted for Sexual forms" show="true" primary-key="false" generator="null" key="numWbcSexual" type="integer" maxvalue="NaN" is-related="false" readonly="false" required="true"
-                                            placeholder="Enter value" minvalue="NaN" multiple="false" regexp=".*"></wm-form-field>
-                                        </wm-gridcolumn>
-                                    </wm-gridrow>
-                                    <wm-gridrow name="gridrow99">
-                                        <wm-gridcolumn name="gridcolumn31" columnwidth="12">
-                                            <wm-form-field display-name="Number of Infected RBC's counted" show="true" primary-key="false" generator="null" key="numInfectedRbc" type="integer" maxvalue="NaN" is-related="false" readonly="false" required="true"
-                                            placeholder="Enter value" minvalue="NaN" multiple="false" regexp=".*"></wm-form-field>
-                                        </wm-gridcolumn>
-                                    </wm-gridrow>
-                                    <wm-gridrow name="gridrow100">
-                                        <wm-gridcolumn name="gridcolumn32" columnwidth="12">
-                                            <wm-form-field display-name="Total number of RBC's counted" show="true" primary-key="false" generator="null" key="totalRbc" type="integer" maxvalue="NaN" is-related="false" readonly="false" required="true" placeholder="Enter value"
+                                    <wm-gridrow name="gridrow27">
+                                        <wm-gridcolumn name="gridcolumn130" columnwidth="12">
+                                            <wm-form-field display-name="Num Trophozoites" show="true" primary-key="false" generator="null" key="numTrophozoites" type="integer" maxvalue="NaN" is-related="false" readonly="false" required="true" placeholder="Enter value"
                                             minvalue="NaN" multiple="false" regexp=".*"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
-                                    <wm-gridrow name="gridrow101">
-                                        <wm-gridcolumn name="gridcolumn33" columnwidth="12">
+                                    <wm-gridrow name="gridrow28">
+                                        <wm-gridcolumn name="gridcolumn131" columnwidth="12">
+                                            <wm-form-field display-name="Num Wbc Asexual" show="true" primary-key="false" generator="null" key="numWbcAsexual" type="integer" maxvalue="NaN" is-related="false" readonly="false" required="true" placeholder="Enter value"
+                                            minvalue="NaN" multiple="false" regexp=".*"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow29">
+                                        <wm-gridcolumn name="gridcolumn132" columnwidth="12">
+                                            <wm-form-field display-name="Num Gametocytes" show="true" primary-key="false" generator="null" key="numGametocytes" type="integer" maxvalue="NaN" is-related="false" readonly="false" required="true" placeholder="Enter value"
+                                            minvalue="NaN" multiple="false" regexp=".*"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow30">
+                                        <wm-gridcolumn name="gridcolumn133" columnwidth="12">
+                                            <wm-form-field display-name="Num Wbc Sexual" show="true" primary-key="false" generator="null" key="numWbcSexual" type="integer" maxvalue="NaN" is-related="false" readonly="false" required="true" placeholder="Enter value"
+                                            minvalue="NaN" multiple="false" regexp=".*"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow31">
+                                        <wm-gridcolumn name="gridcolumn134" columnwidth="12">
+                                            <wm-form-field display-name="Num Infected Rbc" show="true" primary-key="false" generator="null" key="numInfectedRbc" type="integer" maxvalue="NaN" is-related="false" readonly="false" required="true" placeholder="Enter value"
+                                            minvalue="NaN" multiple="false" regexp=".*"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow32">
+                                        <wm-gridcolumn name="gridcolumn135" columnwidth="12">
+                                            <wm-form-field display-name="Total Rbc" show="true" primary-key="false" generator="null" key="totalRbc" type="integer" maxvalue="NaN" is-related="false" readonly="false" required="true" placeholder="Enter value"
+                                            minvalue="NaN" multiple="false" regexp=".*"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow33">
+                                        <wm-gridcolumn name="gridcolumn136" columnwidth="12">
                                             <wm-form-field display-name="Comments" show="true" primary-key="false" generator="null" key="comments" type="string" maxvalue="255" is-related="false" readonly="false" required="false" placeholder="Enter value"
                                             multiple="false" regexp=".*"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
-                                    <wm-gridrow name="gridrow102">
-                                        <wm-gridcolumn name="gridcolumn34" columnwidth="12">
+                                    <wm-gridrow name="gridrow34">
+                                        <wm-gridcolumn name="gridcolumn137" columnwidth="12">
                                             <wm-form-field display-name="Lab Tech Initials" show="true" primary-key="false" generator="null" key="labTechInitials" type="string" maxvalue="2" is-related="false" readonly="false" required="true" placeholder="Enter value"
-                                            multiple="false" regexp="^[A-Z]{2}$"></wm-form-field>
+                                            multiple="false" regexp=".*"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                 </wm-layoutgrid>
